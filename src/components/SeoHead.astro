@@ -1,0 +1,71 @@
+---
+import { site } from '../lib/site';
+
+export interface Props {
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  type?: 'website' | 'article';
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+  noindex?: boolean;
+}
+
+const {
+  title = site.title,
+  description = site.description,
+  canonicalPath = '',
+  type = 'website',
+  schema,
+  noindex = false,
+} = Astro.props;
+
+// Ensure trailing slash on canonical URL to match site configuration
+const cleanPath = canonicalPath.replace(/^\/+|\/+$/g, '');
+const canonicalUrl = cleanPath ? `${site.url}/${cleanPath}/` : `${site.url}/`;
+const ogImageUrl = `${site.url}/favicon.svg`;
+
+const defaultSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${site.url}/#website`,
+      url: `${site.url}/`,
+      name: site.brandName,
+      description: site.description,
+    },
+    ...(Array.isArray(schema) ? schema : schema ? [schema] : []),
+  ],
+};
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" href="/favicon.ico" />
+
+{noindex ? (
+  <meta name="robots" content="noindex, nofollow" />
+) : (
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+)}
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:site_name" content={site.brandName} />
+<meta property="og:image" content={ogImageUrl} />
+
+<!-- Twitter / Social -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageUrl} />
+
+<!-- Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(defaultSchema)} />

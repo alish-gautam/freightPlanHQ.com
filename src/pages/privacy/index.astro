@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { BRAND_NAME } from '../../lib/site';
+---
+
+<Layout
+  title={`Privacy Policy — ${BRAND_NAME}`}
+  description={`Privacy Policy for ${BRAND_NAME}. Pure client-side calculations with no storage or monetization of proprietary cargo data.`}
+  canonicalPath="privacy"
+>
+  <div class="container-narrow py-6 sm:py-10">
+    <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
+
+    <header class="mt-4 mb-8">
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+        Privacy Policy
+      </h1>
+      <p class="text-base text-gray-600 leading-relaxed max-w-2xl m-0">
+        We respect your proprietary cargo data and adhere to a strict client-side architecture.
+      </p>
+    </header>
+
+    <div class="prose max-w-none space-y-6 text-sm text-gray-700 leading-relaxed">
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">1. Client-Side Cargo Calculations</h2>
+        <p>
+          All calculation inputs (dimensions, weights, carton quantities, pallet specifications, and freight values) are processed directly within your web browser using client-side JavaScript. We do not transmit, log, store, or analyze your cargo data on our servers. Your commercial shipment data never leaves your device.
+        </p>
+      </section>
+
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">2. Zero Tracking Cookies & Local Storage</h2>
+        <p>
+          {BRAND_NAME} sets no tracking cookies, marketing cookies, or session cookies. We do not utilize browser <code>localStorage</code> or <code>sessionStorage</code> to store user profiles, device identifiers, or tracking fingerprints.
+        </p>
+      </section>
+
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">3. Third-Party Scripts, Fonts & External APIs</h2>
+        <p>
+          We do not embed third-party analytics trackers (such as Google Analytics or Meta Pixel), third-party advertising scripts, or external telemetry libraries. All styles and scripts are bundled and served directly from our static host. Typography is rendered using your operating system's native system font stack; no external font CDNs (such as Google Fonts or Adobe Fonts) are contacted.
+        </p>
+      </section>
+
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">4. Hosting Infrastructure Access Logs</h2>
+        <p>
+          Like all web servers, standard access logs (consisting of the requesting device's IP address, browser user-agent, referring URL, and request timestamp) are temporarily processed by our static web hosting infrastructure. These server logs are maintained strictly for network transmission integrity, DDoS mitigation, and infrastructure security.
+        </p>
+      </section>
+
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">5. No User Accounts or Personal Information</h2>
+        <p>
+          {BRAND_NAME} does not require registration, login, or user profiles. We do not collect names, company affiliations, physical shipping addresses, or payment card details.
+        </p>
+      </section>
+
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">6. Contact Information</h2>
+        <p>
+          For privacy inquiries or technical questions regarding this website, refer to our <a href="/contact/" class="text-blue-600 hover:underline">Contact</a> page.
+        </p>
+      </section>
+    </div>
+  </div>
+</Layout>

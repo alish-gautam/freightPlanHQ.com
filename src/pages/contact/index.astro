@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { BRAND_NAME, DOMAIN } from '../../lib/site';
+---
+
+<Layout
+  title={`Contact & Feedback — ${BRAND_NAME}`}
+  description={`Contact the engineering team behind ${BRAND_NAME} for calculation bug reports, source updates, and feedback.`}
+  canonicalPath="contact"
+>
+  <div class="container-narrow py-6 sm:py-10">
+    <Breadcrumbs items={[{ label: 'Contact' }]} />
+
+    <header class="mt-4 mb-8">
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+        Contact & Feedback
+      </h1>
+      <p class="text-base text-gray-600 leading-relaxed max-w-2xl m-0">
+        We welcome technical feedback, calculation bug reports, and updates to industry standards.
+      </p>
+    </header>
+
+    <div class="prose max-w-none space-y-6 text-sm text-gray-700 leading-relaxed">
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">Technical Issues & Bug Reports</h2>
+        <p>
+          If you identify a numerical error, boundary discrepancy in our freight class engine, or an equipment specification that deviates from published ISO or container line standards, please submit a detailed report including:
+        </p>
+        <ul class="space-y-1 pl-5">
+          <li>The specific calculator or guide URL</li>
+          <li>Exact inputs used (dimensions, weights, quantities, units)</li>
+          <li>The observed output versus your expected calculated output</li>
+          <li>Citations to the relevant primary standard or published carrier tariff</li>
+        </ul>
+      </section>
+
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">Standard Inquiries</h2>
+        <p>
+          For general questions regarding the calculation methodology or to suggest new equipment presets, reach out through the primary domain contact channels for <code>{DOMAIN}</code>.
+        </p>
+        <p class="text-xs text-gray-500 font-mono mt-4">
+          Note: {BRAND_NAME} is an engineering calculation platform. We cannot provide commercial freight rate quotes, book cargo, or answer questions regarding specific carrier shipments in transit.
+        </p>
+      </section>
+    </div>
+  </div>
+</Layout>

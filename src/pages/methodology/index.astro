@@ -1,0 +1,91 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+---
+
+<Layout
+  title="Calculation Methodology & Architecture — FreightPlanHQ"
+  description="Detailed technical breakdown of calculation architecture, unit normalization, packing algorithms, and source verification standards."
+  canonicalPath="methodology"
+>
+  <div class="container-narrow py-6 sm:py-10">
+    <Breadcrumbs items={[{ label: 'Methodology' }]} />
+
+    <header class="mt-4 mb-8">
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+        Calculation Methodology & Architecture
+      </h1>
+      <p class="text-base text-gray-600 leading-relaxed max-w-2xl m-0">
+        How calculations, packing heuristics, and unit systems are architected across the platform.
+      </p>
+    </header>
+
+    <div class="prose max-w-none space-y-8 text-sm text-gray-700 leading-relaxed">
+      <!-- Unit Normalization -->
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-xl font-bold text-gray-950 mb-2">1. Unit Normalization Engine</h2>
+        <p>
+          Calculations normalize all user inputs into canonical SI units internally before performing mathematical operations:
+        </p>
+        <ul class="space-y-1 pl-5">
+          <li><strong>Length:</strong> Normalized to meters (m) using exact factors (1 in = 0.0254 m; 1 mm = 0.001 m).</li>
+          <li><strong>Mass / Weight:</strong> Normalized to kilograms (kg) using exact factors (1 lb = 0.45359237 kg).</li>
+          <li><strong>Volume:</strong> Normalized to cubic meters (m³) and liters.</li>
+        </ul>
+        <p>
+          After calculations complete, values are converted back to the user's selected unit and formatted with locale-safe, context-appropriate decimal precision.
+        </p>
+      </section>
+
+      <!-- Packing Heuristics -->
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-xl font-bold text-gray-950 mb-2">2. Rectangular Packing Heuristics</h2>
+        <p>
+          Unlike generic calculator websites that divide container volume by carton volume, {Astro.site ? '' : ''}our engines run deterministic 2D and 3D rectangular packing heuristics:
+        </p>
+        <div class="space-y-3 mt-3">
+          <div class="border border-gray-200 rounded-lg p-4 bg-white">
+            <h3 class="font-bold text-gray-900 text-sm mb-1">Pallet Layer Geometry (TI × HI)</h3>
+            <p class="text-xs text-gray-600 m-0">
+              Evaluates aligned and rotated rectangular floor patterns, mixed strip arrangements, and vertical layer constraints. Checks payload ratings, deck height allowances, and carton overhang limits.
+            </p>
+          </div>
+          <div class="border border-gray-200 rounded-lg p-4 bg-white">
+            <h3 class="font-bold text-gray-900 text-sm mb-1">Trailer Floor & Pallet Packing</h3>
+            <p class="text-xs text-gray-600 m-0">
+              Packs items across usable trailer widths (e.g. 2.4 m European trailers or 96" North American dry vans) to find the shortest continuous floor length (linear feet / loading meters).
+            </p>
+          </div>
+          <div class="border border-gray-200 rounded-lg p-4 bg-white">
+            <h3 class="font-bold text-gray-900 text-sm mb-1">3D Container Packing</h3>
+            <p class="text-xs text-gray-600 m-0">
+              Evaluates multiple layer orientations and floor placements. Calculates actual Cartesian coordinate bounding boxes [x, y, z, l, w, h] to guarantee zero overlaps and verify equipment bounds.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Density & Classification -->
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-xl font-bold text-gray-950 mb-2">3. Freight Density & Classification Boundary Logic</h2>
+        <p>
+          Freight class lookup utilizes the current NMFTA 13-sub full-scale density schedule. Boundary handling uses normalized half-open intervals: <code>min &le; density &lt; max</code>. For example, a density of exactly 15.000000 lb/ft³ is classified as Class 70 (15 to &lt;22.5 PCF), avoiding floating-point precision threshold bugs.
+        </p>
+      </section>
+
+      <!-- Source Verification -->
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-xl font-bold text-gray-950 mb-2">4. Source Hierarchy & Verification Protocol</h2>
+        <p>
+          All reference specifications follow a strict source priority:
+        </p>
+        <ol class="space-y-1 pl-5">
+          <li><strong>Primary Standards Bodies:</strong> ISO (ISO 6780 for pallets) and EPAL.</li>
+          <li><strong>Industry Associations:</strong> NMFTA (FCDC density schedules) and IATA (volumetric cargo conventions).</li>
+          <li><strong>Equipment Specifications:</strong> Official container line specifications (Maersk, MSC, Hapag-Lloyd).</li>
+          <li><strong>Carrier Service Guidelines:</strong> Published tariff rules from national parcel carriers (UPS, FedEx).</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</Layout>

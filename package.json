@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "freightplanhq",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -9,12 +9,23 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest run",
+    "check": "astro check"
   },
   "dependencies": {
-    "astro": "^7.3.5"
+    "@astrojs/sitemap": "^3.7.4",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.5",
+    "tailwindcss": "^4.3.3"
   },
   "allowScripts": {
     "esbuild": true
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "puppeteer-core": "^25.12.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.3"
   }
 }

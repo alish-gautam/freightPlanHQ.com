@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { BRAND_NAME } from '../../lib/site';
+---
+
+<Layout
+  title={`Legal & Planning Disclaimer — ${BRAND_NAME}`}
+  description="Important legal disclaimer regarding calculation estimates, carrier rule variability, and commercial quotation limitations."
+  canonicalPath="disclaimer"
+>
+  <div class="container-narrow py-6 sm:py-10">
+    <Breadcrumbs items={[{ label: 'Disclaimer' }]} />
+
+    <header class="mt-4 mb-8">
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+        Planning & Legal Disclaimer
+      </h1>
+      <p class="text-base text-gray-600 leading-relaxed max-w-2xl m-0">
+        Fundamental distinctions between physical calculations, planning estimates, and official carrier tariffs.
+      </p>
+    </header>
+
+    <div class="prose max-w-none space-y-6 text-sm text-gray-700 leading-relaxed">
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">1. Estimation vs Official Tariff Rules</h2>
+        <p>
+          All calculations provided on {BRAND_NAME} are intended strictly as engineering planning estimates. They do not constitute official carrier quotations, guaranteed transport rates, legally binding tariffs, or commercial contracts. Shippers must obtain formal rate confirmations and bills of lading directly from their carriers or freight forwarders.
+        </p>
+      </section>
+
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">2. LTL Freight Classification (NMFC) Notice</h2>
+        <p>
+          Calculations of LTL freight class on this site reflect mathematical density (pounds per cubic foot) mapped against the published 13-sub density structure. This tool does not perform official National Motor Freight Classification (NMFC) commodity code lookups. Actual freight class determined by an LTL carrier on a bill of lading depends on the applicable NMFC item, commodity composition, handling difficulty, stowability, liability exposure, packaging type, and carrier-specific rules tariffs.
+        </p>
+      </section>
+
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">3. Ocean Container Equipment Variability</h2>
+        <p>
+          Container dimensions, door opening measurements, tare weights, and payload capacities presented on this site are standard industry reference specifications (based on typical ISO dry containers). Actual equipment dimensions vary by container manufacturer, production series, age, and steamship line. Shippers must independently verify the maximum gross weight and payload stamped on the physical container’s CSC (Container Safety Convention) plate before loading to ensure compliance with SOLAS VGM regulations.
+        </p>
+      </section>
+
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">4. Dimensional Weight & Carrier Divisors</h2>
+        <p>
+          Dimensional weight calculations use standard published industry divisors (such as 139 in³/lb, 166 in³/lb, and 5,000 cm³/kg). Actual divisors applied to commercial accounts are subject to negotiated carrier contracts, customer-specific service agreements, and regional tariffs. Furthermore, carriers may apply rounding rules (such as rounding dimensions up to the nearest whole inch) that alter billable weights.
+        </p>
+      </section>
+
+      <section class="border-t border-gray-200 pt-6">
+        <h2 class="text-lg font-bold text-gray-950 mb-2">5. Ocean LCL and Air Cargo Surcharges</h2>
+        <p>
+          Calculations for ocean LCL (Weight or Measure) and air cargo chargeable weight represent base freight planning only. They do not include fuel surcharges (BAF), currency adjustments (CAF), terminal handling charges (THC), container freight station fees (CFS), customs clearance fees, or seasonal peak surcharges.
+        </p>
+      </section>
+    </div>
+  </div>
+</Layout>

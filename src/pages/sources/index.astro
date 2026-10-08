@@ -1,0 +1,66 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { sources } from '../../lib/sources';
+---
+
+<Layout
+  title="Primary Standards & Sources Registry — FreightPlanHQ"
+  description="Transparent directory of industry standards, carrier reference rules, and equipment specifications used across our calculators."
+  canonicalPath="sources"
+>
+  <div class="container-narrow py-6 sm:py-10">
+    <Breadcrumbs items={[{ label: 'Sources' }]} />
+
+    <header class="mt-4 mb-8">
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+        Standards & Sources Registry
+      </h1>
+      <p class="text-base text-gray-600 leading-relaxed max-w-2xl m-0">
+        Every rule-sensitive parameter, container dimension, and freight class tier on this platform references a recorded industry source.
+      </p>
+    </header>
+
+    <div class="space-y-6">
+      {sources.map((s) => (
+        <div class="border border-gray-200 rounded-xl bg-white p-6 shadow-2xs">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-gray-100 gap-2 mb-3">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-wider text-blue-600 font-semibold block">
+                {s.topic}
+              </span>
+              <h2 class="text-base font-bold text-gray-950 m-0">
+                {s.organization}
+              </h2>
+            </div>
+            <div class="text-[11px] font-mono text-gray-400 sm:text-right">
+              <div>Type: {s.type}</div>
+              <div>Verified: {s.verified}</div>
+            </div>
+          </div>
+
+          <p class="font-medium text-sm text-gray-900 mb-2">
+            <a href={s.url} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
+              {s.title} ↗
+            </a>
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-gray-600 my-3">
+            <div>
+              <span class="font-semibold text-gray-900 block mb-0.5">Applicability:</span>
+              <p class="m-0 leading-relaxed">{s.applicability}</p>
+            </div>
+            <div>
+              <span class="font-semibold text-gray-900 block mb-0.5">Important Limitations:</span>
+              <p class="m-0 leading-relaxed">{s.limitation}</p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded p-3 text-[11px] text-gray-500 font-mono mt-3 border border-gray-100">
+            <span class="text-gray-700 font-semibold">Verification Method:</span> {s.verificationMethod}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { calculators } from '../lib/calculators/registry';
+
+const flagshipCalcs = calculators.filter((c) => c.flagship);
+---
+
+<Layout
+  title="Page Not Found (404) — FreightPlanHQ"
+  description="The requested page could not be found. Explore our freight planning and packaging calculators."
+  noindex={true}
+>
+  <div class="container-narrow py-16 text-center">
+    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-900 font-mono font-bold text-sm mb-4">
+      404
+    </div>
+    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+      Page Not Found
+    </h1>
+    <p class="text-base text-gray-600 max-w-md mx-auto mb-8">
+      The calculator or guide URL you requested does not exist or may have moved.
+    </p>
+
+    <div class="border border-gray-200 rounded-xl bg-white p-6 max-w-lg mx-auto text-left shadow-2xs mb-8">
+      <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3 font-mono">
+        Popular Freight Calculators
+      </h2>
+      <ul class="space-y-2.5 p-0 m-0 list-none text-sm">
+        {flagshipCalcs.map((calc) => (
+          <li>
+            <a href={calc.path} class="text-blue-600 hover:underline font-medium block">
+              {calc.title} →
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <a href="/" class="btn btn-primary">
+      Return to Homepage
+    </a>
+  </div>
+</Layout>

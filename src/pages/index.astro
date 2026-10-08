@@ -1,11 +1,253 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import { calculators } from '../lib/calculators/registry';
+import { guides } from '../lib/guides/registry';
+import { site } from '../lib/site';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const flagshipCalcs = calculators.filter((c) => c.flagship);
+
+const workflowSteps = [
+  { step: '01', title: 'Measure Package', desc: 'Outer length, width, height, and gross weight', link: '/box-volume-calculator/' },
+  { step: '02', title: 'Calculate Volume', desc: 'CBM and cubic feet across SKUs', link: '/cbm-calculator/' },
+  { step: '03', title: 'Calculate Density', desc: 'Pounds per cubic foot (PCF) and kg/m³', link: '/freight-density-calculator/' },
+  { step: '04', title: 'Build Pallets', desc: 'TI × HI layer geometry, tare, and height', link: '/pallet-calculator/' },
+  { step: '05', title: 'Check DIM Weight', desc: 'Billable weight across carrier divisors', link: '/dimensional-weight-calculator/' },
+  { step: '06', title: 'Plan Mode', desc: 'LTL freight class, air chargeable weight, or ocean W/M', link: '/freight-class-calculator/' },
+  { step: '07', title: 'Fill Equipment', desc: '3D container loading, LDM, or trailer linear feet', link: '/container-loading-calculator/' },
+];
+
+const categories = [
+  {
+    id: 'freight-measurement',
+    name: 'Freight Measurement',
+    desc: 'Volume, density, and LTL classification for North American and global freight.',
+    slugs: ['freight-class-calculator', 'cbm-calculator', 'freight-density-calculator'],
+  },
+  {
+    id: 'pallet-planning',
+    name: 'Pallet Planning',
+    desc: 'Stacking patterns, TI × HI layers, overhang limits, and container floor arrangements.',
+    slugs: ['pallet-calculator', 'pallets-per-container-calculator'],
+  },
+  {
+    id: 'packaging',
+    name: 'Packaging & Parcel',
+    desc: 'Carton sizing, void reduction, package girth, and dimensional weight comparison.',
+    slugs: ['dimensional-weight-calculator', 'box-size-calculator', 'box-volume-calculator', 'package-girth-calculator'],
+  },
+  {
+    id: 'air-ocean',
+    name: 'Air & Ocean',
+    desc: 'IATA 1:6000 air cargo volumetric weight and ocean LCL Weight or Measure (W/M) revenue tons.',
+    slugs: ['air-freight-chargeable-weight-calculator', 'lcl-freight-calculator'],
+  },
+  {
+    id: 'containers-trailers',
+    name: 'Containers & Trailers',
+    desc: '3D container packing heuristics, European loading meters (LDM), and North American linear feet.',
+    slugs: ['container-loading-calculator', 'loading-meter-calculator', 'linear-feet-calculator'],
+  },
+];
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title={site.title}
+  description={site.description}
+  canonicalPath=""
+>
+  <!-- Hero Section: Engineering Utility Positioning -->
+  <section class="border-b border-gray-200 bg-white py-12 sm:py-16">
+    <div class="container-wide">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-gray-100 border border-gray-200 text-xs font-mono text-gray-700 uppercase tracking-wider mb-4">
+          <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+          <span>Deterministic Logistics Engines</span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-gray-950 mb-4 leading-tight">
+          Freight & Packaging Planning Platform
+        </h1>
+        <p class="text-base sm:text-lg text-gray-600 leading-relaxed m-0 mb-6">
+          A disciplined suite of engineering calculators for measuring cargo, right-sizing packaging, building pallet layers, and planning trailer and container utilization before requesting carrier quotations.
+        </p>
+
+        <!-- Technical Trust Statement -->
+        <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-gray-500 pt-2 border-t border-gray-100">
+          <span>✓ Pure client-side execution</span>
+          <span>✓ Real 3D packing coordinates</span>
+          <span>✓ Transparent source registry</span>
+          <span>✓ Zero commercial rate bias</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7-Step Workflow Pipeline -->
+  <section class="border-b border-gray-200 bg-gray-100/60 py-10">
+    <div class="container-wide">
+      <div class="flex items-center justify-between mb-6">
+        <div>
+          <h2 class="text-xs font-mono uppercase tracking-wider text-gray-500 font-semibold mb-1">
+            Freight Planning Pipeline
+          </h2>
+          <p class="text-sm font-bold text-gray-900 m-0">
+            How Freight Planning Connects Sequentially
+          </p>
+        </div>
+        <span class="hidden sm:inline-block text-xs text-gray-400 font-mono">
+          Product → Carton → Pallet → Equipment
+        </span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+        {workflowSteps.map((step) => (
+          <a
+            href={step.link}
+            class="block p-3.5 bg-white border border-gray-200 rounded-lg hover:border-gray-900 transition-colors no-underline group shadow-2xs"
+          >
+            <span class="text-[11px] font-mono font-bold text-blue-600 block mb-1">
+              {step.step}
+            </span>
+            <span class="text-xs font-bold text-gray-900 group-hover:text-blue-600 block mb-1">
+              {step.title}
+            </span>
+            <span class="text-[11px] text-gray-500 line-clamp-2 leading-snug">
+              {step.desc}
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Flagship Tools Grid -->
+  <section class="py-12 border-b border-gray-200 bg-white">
+    <div class="container-wide">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-wider text-blue-600 font-semibold block mb-1">
+            Flagship Utilities
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-950 tracking-tight m-0">
+            Most Frequently Used Planning Tools
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {flagshipCalcs.map((calc) => (
+          <a
+            href={calc.path}
+            class="block p-6 border border-gray-200 rounded-xl bg-gray-50/50 hover:bg-white hover:border-gray-950 hover:shadow-sm transition-all no-underline group"
+          >
+            <div class="flex items-center justify-between mb-3 text-xs font-mono text-gray-400">
+              <span class="text-gray-600">{calc.category}</span>
+              <span class="text-blue-600 font-semibold group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-950 group-hover:text-blue-600 mb-2 tracking-tight">
+              {calc.title}
+            </h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-4 m-0">
+              {calc.shortDesc}
+            </p>
+            <div class="pt-3 border-t border-gray-200/60 text-[11px] font-mono text-gray-500">
+              Formula: <span class="text-gray-700">{calc.formula.latexOrCode}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Categorized Tool Directory -->
+  <section class="py-12 bg-gray-50">
+    <div class="container-wide">
+      <div class="mb-10 text-center max-w-xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-950 tracking-tight mb-2">
+          Complete Calculator Directory
+        </h2>
+        <p class="text-xs text-gray-500">
+          All 14 calculators organized by logistics domain. Every calculation runs on pure client mathematics.
+        </p>
+      </div>
+
+      <div class="space-y-10">
+        {categories.map((cat) => (
+          <div id={`category-${cat.id}`} class="border border-gray-200 rounded-xl bg-white p-6 shadow-2xs">
+            <div class="mb-4 pb-3 border-b border-gray-100 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <div>
+                <h3 class="text-base font-bold text-gray-950 m-0">
+                  {cat.name}
+                </h3>
+                <p class="text-xs text-gray-500 m-0 mt-0.5">
+                  {cat.desc}
+                </p>
+              </div>
+              <span class="text-[11px] font-mono text-gray-400">
+                {cat.slugs.length} tools
+              </span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {cat.slugs.map((slug) => {
+                const c = calculators.find((item) => item.slug === slug);
+                if (!c) return null;
+                return (
+                  <a
+                    href={c.path}
+                    class="block p-4 border border-gray-100 rounded-lg bg-gray-50/70 hover:bg-white hover:border-gray-900 transition-colors no-underline group"
+                  >
+                    <span class="font-bold text-sm text-gray-900 group-hover:text-blue-600 block mb-1">
+                      {c.title} →
+                    </span>
+                    <span class="text-xs text-gray-500 line-clamp-2 leading-relaxed">
+                      {c.shortDesc}
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Guides & Standards Section -->
+  <section class="py-12 border-t border-gray-200 bg-white">
+    <div class="container-wide">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-wider text-blue-600 font-semibold block mb-1">
+            Reference Documentation
+          </span>
+          <h2 class="text-2xl font-bold text-gray-950 tracking-tight m-0">
+            Featured Freight & Packaging Guides
+          </h2>
+        </div>
+        <a href="/guides/" class="text-xs font-mono font-semibold text-blue-600 hover:underline">
+          View all 18 guides →
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {guides.slice(0, 6).map((g) => (
+          <a
+            href={g.path}
+            class="block p-5 border border-gray-200 rounded-xl bg-white hover:border-gray-950 transition-colors no-underline group shadow-2xs"
+          >
+            <div class="flex items-center justify-between text-xs text-gray-400 mb-2 font-mono">
+              <span>{g.category}</span>
+              <span>{g.readingTime}</span>
+            </div>
+            <h3 class="text-sm font-bold text-gray-950 group-hover:text-blue-600 mb-2 leading-snug">
+              {g.title} →
+            </h3>
+            <p class="text-xs text-gray-500 line-clamp-2 m-0 leading-relaxed">
+              {g.summary}
+            </p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
 </Layout>

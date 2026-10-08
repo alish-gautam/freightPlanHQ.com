@@ -1,0 +1,65 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { guides } from '../../lib/guides/registry';
+
+const categories = [
+  'Freight Measurement',
+  'Pallet Planning',
+  'Packaging',
+  'Air & Ocean',
+  'Containers & Trailers',
+] as const;
+---
+
+<Layout
+  title="Freight & Packaging Planning Guides — FreightPlanHQ"
+  description="Comprehensive technical guides to freight classification, container dimensions, pallet patterns, dimensional weight formulas, and international shipping rules."
+  canonicalPath="guides"
+>
+  <div class="container-narrow py-6 sm:py-10">
+    <Breadcrumbs items={[{ label: 'Guides' }]} />
+
+    <header class="mt-4 mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+        Freight & Packaging Reference Guides
+      </h1>
+      <p class="text-base text-gray-600 leading-relaxed max-w-2xl m-0">
+        Disciplined, source-backed references explaining the mathematics, international standards, and carrier rules governing freight planning.
+      </p>
+    </header>
+
+    <div class="space-y-12">
+      {categories.map((cat) => {
+        const catGuides = guides.filter((g) => g.category === cat);
+        if (catGuides.length === 0) return null;
+        return (
+          <section class="border-t border-gray-200 pt-6">
+            <h2 class="text-lg font-bold text-gray-950 uppercase tracking-wider text-xs text-blue-600 mb-4 font-mono">
+              {cat}
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {catGuides.map((g) => (
+                <a
+                  href={g.path}
+                  class="block p-5 border border-gray-200 rounded-lg bg-white hover:border-gray-950 transition-colors no-underline group shadow-2xs"
+                >
+                  <div class="flex items-center justify-between text-xs text-gray-400 mb-2 font-mono">
+                    <span>{g.readingTime}</span>
+                    <span>Verified {g.lastVerified}</span>
+                  </div>
+                  <h3 class="font-bold text-base text-gray-950 group-hover:text-blue-600 mb-2 leading-snug">
+                    {g.title} →
+                  </h3>
+                  <p class="text-xs text-gray-600 leading-relaxed m-0 line-clamp-3">
+                    {g.summary}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </section>
+        );
+      })}
+    </div>
+  </div>
+</Layout>

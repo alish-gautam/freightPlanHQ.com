@@ -19,6 +19,16 @@ const { title, description, canonicalPath, type, schema, noindex } = Astro.props
 <!doctype html>
 <html lang="en" class="scroll-smooth">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W2RCW0R12K"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-W2RCW0R12K');
+    </script>
+
     <!-- Anti-FOUC Theme Initialization Script before paint -->
     <script is:inline>
       (function() {

@@ -1,76 +1,84 @@
 ---
-import { BRAND_NAME, site } from '../lib/site';
+import { site } from '../lib/site';
+import BrandIcon from './BrandIcon.astro';
 ---
 
-<footer class="border-t border-gray-200 bg-white text-gray-600 text-sm mt-auto">
-  <div class="container-wide py-12">
-    <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+<footer class="border-t border-hairline bg-canvas-elevated text-body text-xs mt-auto transition-colors">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid grid-cols-2 md:grid-cols-6 gap-8 mb-12">
       <!-- Col 1: Brand & Purpose -->
       <div class="col-span-2">
-        <a href="/" class="flex items-center gap-2 text-gray-950 font-semibold tracking-tight text-base mb-3 no-underline">
-          <span class="w-6 h-6 rounded bg-gray-950 text-white flex items-center justify-center font-mono text-xs font-bold">
-            FP
-          </span>
-          <span>{BRAND_NAME}</span>
+        <a href="/" class="flex items-center gap-2.5 text-ink font-bold tracking-tight text-base mb-3 no-underline group">
+          <div class="w-8 h-8 rounded-lg bg-slate-900 text-white dark:bg-white dark:text-slate-950 flex items-center justify-center p-1 shadow-xs border border-hairline">
+            <BrandIcon size={20} />
+          </div>
+          <span>Freight<span class="text-blue-600 dark:text-blue-400">Plan</span><span class="text-xs uppercase text-mute">HQ</span></span>
         </a>
-        <p class="text-xs text-gray-500 leading-relaxed max-w-sm mb-4">
-          A dedicated freight and packaging planning utility platform. Designed for exporters, importers, warehouse staff, and shipping coordinators preparing cargo before requesting carrier quotations.
+        <p class="text-xs text-mute leading-relaxed max-w-sm mb-3">
+          A dedicated freight and packaging planning utility platform. Engineered for exporters, importers, warehouse managers, and shipping coordinators preparing cargo prior to requesting carrier quotations.
         </p>
-        <p class="text-[11px] text-gray-400 font-mono">
+        <p class="text-[11px] text-mute font-mono">
           Strictly distinguishes pure mathematical calculation from planning estimates and carrier tariff rules.
         </p>
       </div>
 
-      <!-- Col 2: Flagship Calculators -->
+      <!-- Col 2: Freight & Pallets -->
       <div>
-        <p class="font-semibold text-xs text-gray-900 uppercase tracking-wider mb-3">Core Calculators</p>
+        <p class="font-bold text-[11px] text-ink uppercase tracking-wider mb-3">Freight & Pallets</p>
         <ul class="space-y-2 list-none p-0 m-0 text-xs">
-          <li><a href="/freight-class-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Freight Class</a></li>
-          <li><a href="/cbm-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">CBM Volume</a></li>
-          <li><a href="/pallet-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Pallet Stacking (TI×HI)</a></li>
-          <li><a href="/dimensional-weight-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Dimensional Weight</a></li>
-          <li><a href="/container-loading-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Container Loading</a></li>
-          <li><a href="/air-freight-chargeable-weight-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Air Chargeable Weight</a></li>
-          <li><a href="/lcl-freight-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Ocean LCL (W/M)</a></li>
+          <li><a href="/freight-class-calculator/" class="text-body hover:text-ink no-underline transition-colors">Freight Class</a></li>
+          <li><a href="/cbm-calculator/" class="text-body hover:text-ink no-underline transition-colors">CBM Volume</a></li>
+          <li><a href="/freight-density-calculator/" class="text-body hover:text-ink no-underline transition-colors">Freight Density</a></li>
+          <li><a href="/pallet-calculator/" class="text-body hover:text-ink no-underline transition-colors">Pallet Stacking (TI×HI)</a></li>
+          <li><a href="/pallets-per-container-calculator/" class="text-body hover:text-ink no-underline transition-colors">Pallets Per Container</a></li>
         </ul>
       </div>
 
-      <!-- Col 3: Specialized Tools -->
+      <!-- Col 3: Packaging & Air/Ocean -->
       <div>
-        <p class="font-semibold text-xs text-gray-900 uppercase tracking-wider mb-3">Equipment & Packaging</p>
+        <p class="font-bold text-[11px] text-ink uppercase tracking-wider mb-3">Packaging & Modes</p>
         <ul class="space-y-2 list-none p-0 m-0 text-xs">
-          <li><a href="/pallets-per-container-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Pallets Per Container</a></li>
-          <li><a href="/loading-meter-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Loading Meters (LDM)</a></li>
-          <li><a href="/linear-feet-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Trailer Linear Feet</a></li>
-          <li><a href="/package-girth-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Package Girth</a></li>
-          <li><a href="/box-size-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Box Sizing</a></li>
-          <li><a href="/box-volume-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Box Volume</a></li>
-          <li><a href="/freight-density-calculator/" class="text-gray-600 hover:text-gray-950 no-underline">Freight Density</a></li>
+          <li><a href="/dimensional-weight-calculator/" class="text-body hover:text-ink no-underline transition-colors">Dimensional Weight</a></li>
+          <li><a href="/box-size-calculator/" class="text-body hover:text-ink no-underline transition-colors">Box Sizing</a></li>
+          <li><a href="/box-volume-calculator/" class="text-body hover:text-ink no-underline transition-colors">Box Volume</a></li>
+          <li><a href="/package-girth-calculator/" class="text-body hover:text-ink no-underline transition-colors">Package Girth</a></li>
+          <li><a href="/air-freight-chargeable-weight-calculator/" class="text-body hover:text-ink no-underline transition-colors">Air Chargeable Weight</a></li>
+          <li><a href="/lcl-freight-calculator/" class="text-body hover:text-ink no-underline transition-colors">Ocean LCL (W/M)</a></li>
         </ul>
       </div>
 
-      <!-- Col 4: Trust, Standards & Legal -->
+      <!-- Col 4: Containers & Equipment -->
       <div>
-        <p class="font-semibold text-xs text-gray-900 uppercase tracking-wider mb-3">Methodology & Trust</p>
+        <p class="font-bold text-[11px] text-ink uppercase tracking-wider mb-3">Equipment</p>
         <ul class="space-y-2 list-none p-0 m-0 text-xs">
-          <li><a href="/guides/" class="text-gray-600 hover:text-gray-950 no-underline">Guides & Reference</a></li>
-          <li><a href="/methodology/" class="text-gray-600 hover:text-gray-950 no-underline">Calculation Architecture</a></li>
-          <li><a href="/sources/" class="text-gray-600 hover:text-gray-950 no-underline">Primary Sources Registry</a></li>
-          <li><a href="/about/" class="text-gray-600 hover:text-gray-950 no-underline">About This Utility</a></li>
-          <li><a href="/disclaimer/" class="text-gray-600 hover:text-gray-950 no-underline">Legal Disclaimer</a></li>
-          <li><a href="/privacy/" class="text-gray-600 hover:text-gray-950 no-underline">Privacy Policy</a></li>
-          <li><a href="/terms/" class="text-gray-600 hover:text-gray-950 no-underline">Terms of Use</a></li>
-          <li><a href="/contact/" class="text-gray-600 hover:text-gray-950 no-underline">Contact</a></li>
+          <li><a href="/container-loading-calculator/" class="text-body hover:text-ink no-underline transition-colors">Container Loading (3D)</a></li>
+          <li><a href="/loading-meter-calculator/" class="text-body hover:text-ink no-underline transition-colors">Loading Meters (LDM)</a></li>
+          <li><a href="/linear-feet-calculator/" class="text-body hover:text-ink no-underline transition-colors">Trailer Linear Feet</a></li>
+          <li><a href="/guides/" class="text-body hover:text-ink no-underline transition-colors">Reference Guides</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 5: Standards & Trust -->
+      <div>
+        <p class="font-bold text-[11px] text-ink uppercase tracking-wider mb-3">Standards & Legal</p>
+        <ul class="space-y-2 list-none p-0 m-0 text-xs">
+          <li><a href="/methodology/" class="text-body hover:text-ink no-underline transition-colors">Methodology</a></li>
+          <li><a href="/sources/" class="text-body hover:text-ink no-underline transition-colors">Source Registry</a></li>
+          <li><a href="/about/" class="text-body hover:text-ink no-underline transition-colors">About Us</a></li>
+          <li><a href="/contact/" class="text-body hover:text-ink no-underline transition-colors">Contact</a></li>
+          <li><a href="/disclaimer/" class="text-body hover:text-ink no-underline transition-colors">Disclaimer</a></li>
+          <li><a href="/privacy/" class="text-body hover:text-ink no-underline transition-colors">Privacy Policy</a></li>
+          <li><a href="/terms/" class="text-body hover:text-ink no-underline transition-colors">Terms of Use</a></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Bar -->
-    <div class="border-t border-gray-100 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
+    <div class="border-t border-hairline pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-mute gap-4">
       <p class="m-0">
         {site.copyright}. All calculation logic is deterministic and client-executed.
       </p>
-      <p class="m-0 text-center sm:text-right text-[11px]">
+      <p class="m-0 text-center sm:text-right text-[11px] text-mute">
         Not an official NMFC tariff, freight brokerage, carrier booking platform, or legal compliance authority.
       </p>
     </div>

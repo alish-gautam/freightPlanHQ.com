@@ -1,43 +1,150 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { calculators } from '../lib/calculators/registry';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { BRAND_NAME } from '../lib/site';
 
-const flagshipCalcs = calculators.filter((c) => c.flagship);
+const keyCalculators = [
+  {
+    title: 'CBM Calculator',
+    path: '/cbm-calculator/',
+    description: 'Calculate total cubic meters, volumetric volume, and ocean container cubic capacity.',
+    category: 'Volume & Capacity',
+  },
+  {
+    title: 'Pallet Calculator',
+    path: '/pallet-calculator/',
+    description: 'Plan carton packing, layer patterns (TI×HI), and maximum pallet height constraints.',
+    category: 'Pallet Planning',
+  },
+  {
+    title: 'Container Loading Calculator',
+    path: '/container-loading-calculator/',
+    description: 'Optimize floor space and cargo loading for 20ft, 40ft, and 40ft High Cube containers.',
+    category: 'Containers & Trailers',
+  },
+  {
+    title: 'Freight Class Calculator',
+    path: '/freight-class-calculator/',
+    description: 'Determine NMFC density-based freight classes from shipment dimensions and weight.',
+    category: 'Freight Classification',
+  },
+];
 ---
 
 <Layout
-  title="Page Not Found (404) — FreightPlanHQ"
-  description="The requested page could not be found. Explore our freight planning and packaging calculators."
+  title={`404 — Page Not Found · ${BRAND_NAME}`}
+  description="The page you're looking for may have moved, or the URL may be incorrect. Use our verified recovery links to access deterministic freight planning tools."
   noindex={true}
 >
-  <div class="container-narrow py-16 text-center">
-    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 text-gray-900 font-mono font-bold text-sm mb-4">
-      404
+  <!-- Top Breadcrumb Bar -->
+  <div class="bg-canvas border-b border-hairline px-4 sm:px-6 lg:px-8 py-2.5">
+    <div class="max-w-4xl mx-auto">
+      <Breadcrumbs items={[{ label: '404 Not Found' }]} />
     </div>
-    <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
-      Page Not Found
-    </h1>
-    <p class="text-base text-gray-600 max-w-md mx-auto mb-8">
-      The calculator or guide URL you requested does not exist or may have moved.
-    </p>
+  </div>
 
-    <div class="border border-gray-200 rounded-xl bg-white p-6 max-w-lg mx-auto text-left shadow-2xs mb-8">
-      <h2 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3 font-mono">
-        Popular Freight Calculators
-      </h2>
-      <ul class="space-y-2.5 p-0 m-0 list-none text-sm">
-        {flagshipCalcs.map((calc) => (
-          <li>
-            <a href={calc.path} class="text-blue-600 hover:underline font-medium block">
-              {calc.title} →
-            </a>
-          </li>
+  <div class="container-narrow py-12 sm:py-20">
+    <div class="max-w-2xl mx-auto text-center">
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-subtle border border-hairline text-xs font-mono font-semibold text-mute tracking-wide mb-6 shadow-2xs">
+        <span class="w-2 h-2 rounded-full bg-amber-500 inline-block" aria-hidden="true"></span>
+        <span>404 — PAGE NOT FOUND</span>
+      </div>
+
+      <!-- Subtle Geometric Planning Motif -->
+      <div class="flex justify-center mb-6" aria-hidden="true">
+        <div class="w-16 h-16 rounded-2xl bg-surface-subtle border border-hairline-strong flex items-center justify-center text-mute shadow-2xs p-3">
+          <svg viewBox="0 0 32 32" fill="none" class="w-full h-full text-slate-700 dark:text-slate-300" stroke="currentColor">
+            <!-- Isometric Cargo Planning Cube Outline with dashed missing section -->
+            <polygon points="16,3 28,9.5 16,16 4,9.5" stroke-width="1.5" stroke-dasharray="2 2" fill="none" class="text-blue-500/30" />
+            <polygon points="4,11 16,17.5 16,30 4,23.5" stroke-width="1.5" fill="none" />
+            <polygon points="17.5,17.5 28,11.5 28,23.5 17.5,29.5" stroke-width="1.5" stroke-dasharray="3 2" fill="none" class="text-amber-500/70" />
+            <!-- Missing Cargo Inspection Tag -->
+            <line x1="16" y1="9.5" x2="16" y2="16" stroke-width="1.5" />
+            <circle cx="16" cy="9.5" r="2" fill="currentColor" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Single Primary Heading -->
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-ink mb-4 leading-tight">
+        404 — Page not found
+      </h1>
+
+      <!-- Supporting Copy -->
+      <p class="text-base sm:text-lg text-body max-w-lg mx-auto mb-8 leading-relaxed">
+        The page you're looking for may have moved, or the URL may be incorrect.
+      </p>
+
+      <!-- Primary Recovery Actions -->
+      <div class="flex flex-wrap items-center justify-center gap-3.5 mb-12">
+        <a href="/" class="btn btn-primary min-h-11 px-6 shadow-xs inline-flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Return to Homepage
+        </a>
+        <a href="/guides/" class="btn btn-secondary min-h-11 px-6 inline-flex items-center gap-2">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+          Browse Reference Guides
+        </a>
+      </div>
+    </div>
+
+    <!-- Recovery Hub: Verified Calculators & Direct Navigation -->
+    <div class="max-w-2xl mx-auto border border-hairline rounded-xl bg-canvas-elevated shadow-xs overflow-hidden">
+      <div class="px-5 py-3.5 bg-surface-subtle border-b border-hairline flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-mute m-0 font-mono">
+          Core Freight Planning Calculators
+        </h2>
+        <a href="/" class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline">
+          Browse all calculators &rarr;
+        </a>
+      </div>
+
+      <nav aria-label="Quick Calculator Recovery" class="divide-y divide-hairline">
+        {keyCalculators.map((calc) => (
+          <a
+            href={calc.path}
+            class="p-4 sm:p-5 flex items-start justify-between gap-4 group hover:bg-surface-subtle/80 transition-colors no-underline text-body block"
+          >
+            <div class="min-w-0">
+              <div class="flex items-center gap-2 mb-1">
+                <span class="text-xs font-mono font-medium text-mute uppercase tracking-wider">
+                  {calc.category}
+                </span>
+              </div>
+              <div class="text-base font-bold text-ink group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                {calc.title}
+              </div>
+              <p class="text-xs sm:text-sm text-mute mt-1 mb-0 leading-normal line-clamp-2">
+                {calc.description}
+              </p>
+            </div>
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-surface-subtle text-mute group-hover:bg-blue-500/10 group-hover:text-blue-600 dark:group-hover:text-blue-400 shrink-0 transition-colors mt-1 font-bold text-sm" aria-hidden="true">
+              &rarr;
+            </span>
+          </a>
         ))}
-      </ul>
-    </div>
+      </nav>
 
-    <a href="/" class="btn btn-primary">
-      Return to Homepage
-    </a>
+      <!-- Recovery Footer / Contact -->
+      <div class="px-5 py-4 bg-surface-subtle/50 border-t border-hairline text-xs text-mute flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div>
+          Looking for a specific route? Reach our engineering team via the{' '}
+          <a href="/contact/" class="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
+            Contact & Feedback
+          </a>{' '}
+          channel.
+        </div>
+        <div class="font-mono text-[11px] text-faint shrink-0">
+          STATUS: 404_PAGE_NOT_FOUND
+        </div>
+      </div>
+    </div>
   </div>
 </Layout>

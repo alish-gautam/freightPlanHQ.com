@@ -9,25 +9,34 @@ import { BRAND_NAME, DOMAIN } from '../../lib/site';
   description={`Contact the engineering team behind ${BRAND_NAME} for calculation bug reports, source updates, and feedback.`}
   canonicalPath="contact"
 >
-  <div class="container-narrow py-6 sm:py-10">
-    <Breadcrumbs items={[{ label: 'Contact' }]} />
+  <!-- Top Breadcrumb Bar -->
+  <div class="bg-canvas border-b border-hairline px-4 sm:px-6 lg:px-8 py-2.5">
+    <div class="max-w-4xl mx-auto">
+      <Breadcrumbs items={[{ label: 'Contact' }]} />
+    </div>
+  </div>
 
-    <header class="mt-4 mb-8">
-      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+  <div class="container-narrow py-8 sm:py-12">
+    <header class="mb-8">
+      <div class="inline-flex items-center gap-1.5 bg-canvas-elevated border border-hairline rounded-full px-3 py-1 text-xs text-mute mb-3 shadow-2xs">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block animate-pulse"></span>
+        <span class="font-mono uppercase tracking-wider font-semibold">FEEDBACK CHANNELS</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink mb-3 leading-tight">
         Contact & Feedback
       </h1>
-      <p class="text-base text-gray-600 leading-relaxed max-w-2xl m-0">
+      <p class="text-sm sm:text-base text-body leading-relaxed max-w-2xl m-0">
         We welcome technical feedback, calculation bug reports, and updates to industry standards.
       </p>
     </header>
 
-    <div class="prose max-w-none space-y-6 text-sm text-gray-700 leading-relaxed">
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-lg font-bold text-gray-950 mb-2">Technical Issues & Bug Reports</h2>
+    <div class="space-y-8 text-sm text-body leading-relaxed">
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">Technical Issues & Bug Reports</h2>
         <p>
           If you identify a numerical error, boundary discrepancy in our freight class engine, or an equipment specification that deviates from published ISO or container line standards, please submit a detailed report including:
         </p>
-        <ul class="space-y-1 pl-5">
+        <ul class="space-y-1.5 pl-5 mt-2 list-disc">
           <li>The specific calculator or guide URL</li>
           <li>Exact inputs used (dimensions, weights, quantities, units)</li>
           <li>The observed output versus your expected calculated output</li>
@@ -35,14 +44,15 @@ import { BRAND_NAME, DOMAIN } from '../../lib/site';
         </ul>
       </section>
 
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-lg font-bold text-gray-950 mb-2">Standard Inquiries</h2>
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">Standard Inquiries & Domain Activation</h2>
         <p>
-          For general questions regarding the calculation methodology or to suggest new equipment presets, reach out through the primary domain contact channels for <code>{DOMAIN}</code>.
+          For general questions regarding the calculation methodology or to suggest new equipment presets, inquiries are managed through the primary domain contact channels for <code>{DOMAIN}</code>.
         </p>
-        <p class="text-xs text-gray-500 font-mono mt-4">
-          Note: {BRAND_NAME} is an engineering calculation platform. We cannot provide commercial freight rate quotes, book cargo, or answer questions regarding specific carrier shipments in transit.
-        </p>
+        <div class="p-4 rounded-xl bg-surface-subtle border border-hairline text-xs text-mute font-mono mt-4 space-y-2">
+          <div><strong class="text-ink">Domain Launch Status:</strong> Dedicated support email routing (<code>inquiries@{DOMAIN.toLowerCase()}</code>) is scheduled for immediate activation following final domain DNS and MX record provisioning.</div>
+          <div><strong class="text-ink">Scope Limitation:</strong> {BRAND_NAME} is an engineering calculation platform. We cannot provide commercial freight rate quotes, book cargo, or answer questions regarding specific carrier shipments in transit.</div>
+        </div>
       </section>
     </div>
   </div>

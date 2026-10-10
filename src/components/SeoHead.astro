@@ -19,6 +19,9 @@ const {
   noindex = false,
 } = Astro.props;
 
+// Enforce preview protection: non-production and preview environments must not be indexed as competing copies
+const isNoindex = noindex || site.isPreview;
+
 // Ensure trailing slash on canonical URL to match site configuration
 const cleanPath = canonicalPath.replace(/^\/+|\/+$/g, '');
 const canonicalUrl = cleanPath ? `${site.url}/${cleanPath}/` : `${site.url}/`;
@@ -43,11 +46,13 @@ const defaultSchema = {
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{title}</title>
 <meta name="description" content={description} />
-<link rel="canonical" href={canonicalUrl} />
+{!isNoindex && <link rel="canonical" href={canonicalUrl} />}
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="icon" href="/favicon.ico" />
+<link rel="alternate icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" id="meta-theme-color" content="#f8fafc" />
 
-{noindex ? (
+{isNoindex ? (
   <meta name="robots" content="noindex, nofollow" />
 ) : (
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

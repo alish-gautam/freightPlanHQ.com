@@ -11,7 +11,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "test": "vitest run",
-    "check": "astro check"
+    "check": "astro check",
+    "deploy": "astro build && wrangler pages deploy dist --project-name freightplanhq"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",
@@ -24,8 +25,10 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
+    "axe-core": "^4.14.0",
     "puppeteer-core": "^25.12.0",
     "typescript": "^6.0.3",
-    "vitest": "^5.0.3"
+    "vitest": "^5.0.3",
+    "wrangler": "^4.149.0"
   }
 }

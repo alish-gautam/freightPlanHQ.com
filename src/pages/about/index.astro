@@ -9,35 +9,44 @@ import { BRAND_NAME } from '../../lib/site';
   description={`Learn about ${BRAND_NAME}, an independent engineering platform for measuring cargo, building pallets, calculating volume, and planning freight.`}
   canonicalPath="about"
 >
-  <div class="container-narrow py-6 sm:py-10">
-    <Breadcrumbs items={[{ label: 'About' }]} />
+  <!-- Top Breadcrumb Bar -->
+  <div class="bg-canvas border-b border-hairline px-4 sm:px-6 lg:px-8 py-2.5">
+    <div class="max-w-4xl mx-auto">
+      <Breadcrumbs items={[{ label: 'About' }]} />
+    </div>
+  </div>
 
-    <header class="mt-4 mb-8">
-      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+  <div class="container-narrow py-8 sm:py-12">
+    <header class="mb-8">
+      <div class="inline-flex items-center gap-1.5 bg-canvas-elevated border border-hairline rounded-full px-3 py-1 text-xs text-mute mb-3 shadow-2xs">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block animate-pulse"></span>
+        <span class="font-mono uppercase tracking-wider font-semibold">UTILITY PLATFORM</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink mb-3 leading-tight">
         About {BRAND_NAME}
       </h1>
-      <p class="text-base text-gray-600 leading-relaxed max-w-2xl m-0">
+      <p class="text-sm sm:text-base text-body leading-relaxed max-w-2xl m-0">
         An independent calculation and planning utility built for the practical physics of freight.
       </p>
     </header>
 
-    <div class="prose max-w-none space-y-6 text-sm text-gray-700 leading-relaxed">
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-xl font-bold text-gray-950 mb-2">Core Purpose</h2>
+    <div class="space-y-8 text-sm text-body leading-relaxed">
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">Core Purpose</h2>
         <p>
           Shipping freight requires navigating complex mathematical relationships across dimensions, density, packaging, and carrier equipment constraints. A shipper dispatching goods must understand how loose cartons pack into master boxes, how boxes layer onto pallets, what density bracket the pallet triggers under LTL tariffs, and how many pallets fill a shipping container or dry van.
         </p>
-        <p>
+        <p class="mt-3">
           {BRAND_NAME} was built to provide rigorous, client-executed calculation tools that model these steps sequentially. The platform helps ecommerce operators, exporters, importers, warehouse teams, and shipping coordinators determine exact physical parameters <em>before</em> requesting a formal freight quote.
         </p>
       </section>
 
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-xl font-bold text-gray-950 mb-2">What This Platform Is Not</h2>
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">What This Platform Is Not</h2>
         <p>
           To maintain absolute neutrality and factual accuracy, {BRAND_NAME} explicitly defines its boundaries:
         </p>
-        <ul class="space-y-1.5 pl-5">
+        <ul class="space-y-1.5 pl-5 mt-2 list-disc">
           <li><strong>Not a freight broker or freight forwarder:</strong> We do not arrange transportation, book cargo, or sell space.</li>
           <li><strong>Not an official NMFC tariff authority:</strong> We provide mathematical density calculations based on the standard 13-sub density table; we do not provide proprietary commodity code lookups.</li>
           <li><strong>Not a carrier rate quotation engine:</strong> We model physical dimensions and volumetric weights; commercial freight rates and fuel surcharges must be obtained from carriers.</li>
@@ -45,30 +54,30 @@ import { BRAND_NAME } from '../../lib/site';
         </ul>
       </section>
 
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-xl font-bold text-gray-950 mb-2">Core Engineering Principles</h2>
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-3">Core Engineering Principles</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-          <div class="border border-gray-200 rounded-lg p-4 bg-white">
-            <h3 class="font-bold text-gray-900 text-sm mb-1">Deterministic Mathematics</h3>
-            <p class="text-xs text-gray-600 m-0">
+          <div class="border border-hairline rounded-xl p-5 bg-canvas-elevated shadow-xs">
+            <h3 class="font-bold text-ink text-sm mb-1.5">Deterministic Mathematics</h3>
+            <p class="text-xs text-mute m-0 leading-relaxed">
               Zero randomness. The exact same inputs always produce identical coordinate placements and numeric results.
             </p>
           </div>
-          <div class="border border-gray-200 rounded-lg p-4 bg-white">
-            <h3 class="font-bold text-gray-900 text-sm mb-1">Client-Side Execution</h3>
-            <p class="text-xs text-gray-600 m-0">
+          <div class="border border-hairline rounded-xl p-5 bg-canvas-elevated shadow-xs">
+            <h3 class="font-bold text-ink text-sm mb-1.5">Client-Side Execution</h3>
+            <p class="text-xs text-mute m-0 leading-relaxed">
               Your cargo dimensions and quantities are calculated directly in your browser. We never log or monetize your proprietary cargo data.
             </p>
           </div>
-          <div class="border border-gray-200 rounded-lg p-4 bg-white">
-            <h3 class="font-bold text-gray-900 text-sm mb-1">Transparent Source Registry</h3>
-            <p class="text-xs text-gray-600 m-0">
+          <div class="border border-hairline rounded-xl p-5 bg-canvas-elevated shadow-xs">
+            <h3 class="font-bold text-ink text-sm mb-1.5">Transparent Source Registry</h3>
+            <p class="text-xs text-mute m-0 leading-relaxed">
               Every density break, container specification, and dimensional divisor points directly to a recorded industry standard.
             </p>
           </div>
-          <div class="border border-gray-200 rounded-lg p-4 bg-white">
-            <h3 class="font-bold text-gray-900 text-sm mb-1">Clear Rule Separation</h3>
-            <p class="text-xs text-gray-600 m-0">
+          <div class="border border-hairline rounded-xl p-5 bg-canvas-elevated shadow-xs">
+            <h3 class="font-bold text-ink text-sm mb-1.5">Clear Rule Separation</h3>
+            <p class="text-xs text-mute m-0 leading-relaxed">
               We strictly separate pure physical geometry from planning estimates and variable carrier tariff rules.
             </p>
           </div>

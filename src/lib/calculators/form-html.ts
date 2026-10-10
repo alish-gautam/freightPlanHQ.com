@@ -37,7 +37,7 @@ function numberHtml(f: NumberField, idPrefix: string, ctx: FormCtx, rowDefaults?
   const help = f.help ? `<p class="field-help" id="${id}-help">${e(f.help)}</p>` : '';
   const step = f.step === undefined ? (f.integer ? '1' : 'any') : String(f.step);
   return `<div class="field"${showAttr(f)} data-field="${e(f.id)}">
-  <label for="${id}">${e(f.label)}${f.optional ? ' <span class="optional">(optional)</span>' : ''}</label>
+  <label for="${id}"><span>${e(f.label)}</span>${f.optional ? ' <span class="optional">(optional)</span>' : ''}</label>
   <div class="input-wrap"><input id="${id}" name="${id}" type="number" inputmode="decimal" step="${step}"${f.min !== undefined ? ` min="${f.min}"` : ''} value="${e(String(val))}" data-kind="number" data-id="${e(f.id)}"${f.integer ? ' data-integer="1"' : ''}${f.help ? ` aria-describedby="${id}-help"` : ''}${unitFrom ? ` data-unit-from="${e(unitFrom)}"` : ''}>${suffix || unitFrom ? `<span class="suffix" data-suffix-for="${id}">${e(suffix)}</span>` : ''}</div>${help}</div>`;
 }
 
@@ -46,7 +46,7 @@ function selectHtml(f: SelectField, idPrefix: string, rowDefaults?: Record<strin
   const cur = rowDefaults && f.id in rowDefaults ? String(rowDefaults[f.id]) : f.default;
   const help = f.help ? `<p class="field-help" id="${id}-help">${e(f.help)}</p>` : '';
   return `<div class="field"${showAttr(f)} data-field="${e(f.id)}">
-  <label for="${id}">${e(f.label)}</label>
+  <label for="${id}"><span>${e(f.label)}</span></label>
   <select id="${id}" name="${id}" data-kind="select" data-id="${e(f.id)}"${f.help ? ` aria-describedby="${id}-help"` : ''}>${f.options
     .map((o) => `<option value="${e(o.value)}"${o.value === cur ? ' selected' : ''}>${e(o.label)}</option>`)
     .join('')}</select>${help}</div>`;
@@ -95,14 +95,24 @@ export function fieldHtml(f: FieldDef, ctx: FormCtx): string {
 
 export function sectionsHtml(sections: Section[]): string {
   const ctx = buildCtx(sections);
-  const render = (s: Section) =>
-    `${s.title ? `<h3 class="form-section-title">${e(s.title)}</h3>` : ''}${s.description ? `<p class="field-help">${e(s.description)}</p>` : ''}<div class="form-grid">${s.fields.map((f) => fieldHtml(f, ctx)).join('')}</div>`;
+  const render = (s: Section, index: number, isAdvanced = false) => {
+    const titleHtml = s.title
+      ? `<div class="form-section-header">
+          <div class="form-section-title-wrap">
+            <span class="section-step-badge">${isAdvanced ? 'A' : index + 1}</span>
+            <h3 class="form-section-title">${e(s.title)}</h3>
+          </div>
+          ${s.description ? `<p class="form-section-desc">${e(s.description)}</p>` : ''}
+        </div>`
+      : '';
+    return `${titleHtml}<div class="form-grid">${s.fields.map((f) => fieldHtml(f, ctx)).join('')}</div>`;
+  };
   const basic = sections.filter((s) => !s.advanced);
   const adv = sections.filter((s) => s.advanced);
   return (
-    basic.map((s) => `<div class="form-section">${render(s)}</div>`).join('') +
+    basic.map((s, i) => `<div class="form-section">${render(s, i, false)}</div>`).join('') +
     (adv.length
-      ? `<details class="advanced" data-advanced><summary>Advanced options</summary>${adv.map((s) => `<div class="form-section">${render(s)}</div>`).join('')}</details>`
+      ? `<details class="advanced" data-advanced><summary>Advanced options</summary>${adv.map((s, i) => `<div class="form-section">${render(s, i, true)}</div>`).join('')}</details>`
       : '')
   );
 }

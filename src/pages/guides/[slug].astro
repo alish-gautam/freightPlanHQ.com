@@ -69,45 +69,51 @@ const resolvedSources = guide.sourceIds
   type="article"
   schema={articleSchema}
 >
-  <div class="container-narrow py-6 sm:py-10">
-    <!-- Breadcrumb -->
-    <Breadcrumbs
-      items={[
-        { label: 'Guides', href: '/guides/' },
-        { label: guide.title },
-      ]}
-    />
+  <!-- Breadcrumb Bar -->
+  <div class="bg-canvas border-b border-hairline px-4 sm:px-6 lg:px-8 py-2.5">
+    <div class="max-w-4xl mx-auto">
+      <Breadcrumbs
+        items={[
+          { label: 'Guides', href: '/guides/' },
+          { label: guide.title },
+        ]}
+      />
+    </div>
+  </div>
 
+  <div class="container-narrow py-8 sm:py-12">
     <!-- Header Block -->
-    <header class="mt-4 mb-8">
-      <div class="flex items-center gap-2 text-xs font-mono text-gray-500 uppercase tracking-wider mb-2">
-        <span>{guide.category}</span>
+    <header class="mb-8">
+      <div class="flex flex-wrap items-center gap-2 text-xs font-mono text-mute uppercase tracking-wider mb-3">
+        <span class="font-bold text-accent bg-surface-subtle px-2 py-0.5 rounded border border-hairline">
+          {guide.category}
+        </span>
         <span>·</span>
         <span>{guide.readingTime}</span>
         <span>·</span>
         <span>Verified {guide.lastVerified}</span>
       </div>
-      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-gray-950 mb-4">
+      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-ink mb-4 leading-tight">
         {guide.h1}
       </h1>
-      <p class="text-base text-gray-600 leading-relaxed max-w-3xl border-l-2 border-gray-900 pl-4 py-1 m-0 bg-gray-50">
+      <div class="p-4 rounded-xl bg-surface-subtle border-l-4 border-blue-600 text-sm sm:text-base text-body leading-relaxed">
         {guide.summary}
-      </p>
+      </div>
     </header>
 
     <!-- Guide Content Sections -->
-    <article class="prose max-w-none space-y-8 text-gray-800 text-sm leading-relaxed">
+    <article class="space-y-10 text-body text-sm leading-relaxed">
       {guide.sections.map((section) => (
-        <section class="border-t border-gray-200 pt-6">
-          <h2 class="text-xl font-bold text-gray-950 tracking-tight mb-3">
+        <section class="border-t border-hairline pt-6">
+          <h2 class="text-xl font-bold text-ink tracking-tight mb-3">
             {section.title}
           </h2>
-          <div class="space-y-3 whitespace-pre-line text-gray-700 leading-relaxed">
+          <div class="space-y-3 whitespace-pre-line text-body leading-relaxed">
             {section.content}
           </div>
 
           {section.table && (
-            <div class="table-scroll my-4">
+            <div class="table-scroll my-5">
               <table class="data-table">
                 <caption>{section.table.caption}</caption>
                 <thead>
@@ -121,7 +127,7 @@ const resolvedSources = guide.sourceIds
                   {section.table.rows.map((row) => (
                     <tr>
                       {row.map((cell, idx) => (
-                        idx === 0 ? <th scope="row" class="font-medium text-gray-950">{cell}</th> : <td>{cell}</td>
+                        idx === 0 ? <th scope="row" class="font-bold text-ink">{cell}</th> : <td>{cell}</td>
                       ))}
                     </tr>
                   ))}
@@ -135,23 +141,30 @@ const resolvedSources = guide.sourceIds
 
     <!-- Primary Source References -->
     {resolvedSources.length > 0 && (
-      <section class="mt-12 pt-8 border-t border-gray-200">
-        <h2 class="text-lg font-bold text-gray-950 tracking-tight mb-3">
-          Authoritative Standards & References
-        </h2>
-        <div class="space-y-3">
+      <section class="mt-12 pt-8 border-t border-hairline">
+        <div class="mb-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-1">
+            Authoritative Basis
+          </span>
+          <h2 class="text-xl font-bold text-ink tracking-tight m-0">
+            Standards & References
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {resolvedSources.map((s) => (
-            <div class="border border-gray-200 rounded-lg p-4 bg-white text-xs">
+            <div class="border border-hairline rounded-xl p-4 bg-canvas-elevated text-xs shadow-xs">
               <div class="flex items-center justify-between mb-1">
-                <span class="font-semibold text-gray-900">{s!.organization}</span>
-                <span class="text-gray-400 font-mono text-[11px]">Last verified: {s!.verified}</span>
+                <span class="font-bold text-ink">{s!.organization}</span>
+                <span class="text-mute font-mono text-[10px] bg-surface-subtle px-1.5 py-0.5 rounded border border-hairline">
+                  Verified: {s!.verified}
+                </span>
               </div>
-              <p class="text-gray-700 font-medium mb-1">
-                <a href={s!.url} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
+              <p class="font-semibold mb-1">
+                <a href={s!.url} target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">
                   {s!.title} ↗
                 </a>
               </p>
-              <p class="text-gray-500 m-0 text-[11px]">
+              <p class="text-mute m-0 text-[11px] leading-relaxed">
                 {s!.notes}
               </p>
             </div>
@@ -162,23 +175,28 @@ const resolvedSources = guide.sourceIds
 
     <!-- Interactive Tools Linked -->
     {relatedCalcs.length > 0 && (
-      <section class="mt-12 pt-8 border-t border-gray-200">
-        <h2 class="text-xl font-bold text-gray-950 tracking-tight mb-2">
-          Interactive Calculators for This Topic
-        </h2>
+      <section class="mt-12 pt-8 border-t border-hairline">
+        <div class="mb-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-1">
+            Interactive Calculators
+          </span>
+          <h2 class="text-xl font-bold text-ink tracking-tight m-0">
+            Calculate This Topic
+          </h2>
+        </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {relatedCalcs.map((rc) => (
             <a
               href={rc!.path}
-              class="block p-5 border border-gray-300 rounded-lg bg-white hover:border-gray-950 transition-colors no-underline group shadow-xs"
+              class="block p-5 border border-hairline rounded-xl bg-canvas-elevated hover:border-ink transition-all no-underline group shadow-xs"
             >
-              <span class="text-[10px] font-mono uppercase tracking-wider text-blue-600 font-semibold block mb-1">
-                Calculator
+              <span class="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400 font-bold block mb-1">
+                {rc!.category}
               </span>
-              <span class="font-bold text-base text-gray-950 group-hover:text-blue-600 block mb-1">
-                {rc!.title} →
+              <span class="font-bold text-base text-ink group-hover:text-blue-600 dark:group-hover:text-blue-400 block mb-1 transition-colors">
+                {rc!.title} &rarr;
               </span>
-              <span class="text-xs text-gray-600 line-clamp-2 leading-relaxed">
+              <span class="text-xs text-mute line-clamp-2 leading-relaxed">
                 {rc!.shortDesc}
               </span>
             </a>
@@ -189,24 +207,29 @@ const resolvedSources = guide.sourceIds
 
     <!-- Related Reference Guides -->
     {relatedGuides.length > 0 && (
-      <section class="mt-12 pt-8 border-t border-gray-200 mb-12">
-        <h2 class="text-xl font-bold text-gray-950 tracking-tight mb-2">
-          Related Guides
-        </h2>
+      <section class="mt-12 pt-8 border-t border-hairline mb-8">
+        <div class="mb-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-1">
+            Further Reading
+          </span>
+          <h2 class="text-xl font-bold text-ink tracking-tight m-0">
+            Related Guides
+          </h2>
+        </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {relatedGuides.map((rg) => (
             <a
               href={rg!.path}
-              class="block p-4 border border-gray-200 rounded-lg bg-white hover:border-gray-950 transition-colors no-underline group shadow-2xs"
+              class="block p-4 border border-hairline rounded-xl bg-canvas-elevated hover:border-ink transition-all no-underline group shadow-2xs"
             >
-              <div class="flex items-center justify-between text-[11px] text-gray-400 mb-1 font-mono">
+              <div class="flex items-center justify-between text-[11px] text-mute mb-1 font-mono">
                 <span>{rg!.category}</span>
                 <span>{rg!.readingTime}</span>
               </div>
-              <span class="font-semibold text-sm text-gray-900 group-hover:text-blue-600 block mb-1">
-                {rg!.title} →
+              <span class="font-semibold text-sm text-ink group-hover:text-blue-600 dark:group-hover:text-blue-400 block mb-1 transition-colors">
+                {rg!.title} &rarr;
               </span>
-              <span class="text-xs text-gray-500 line-clamp-2 leading-snug">
+              <span class="text-xs text-mute line-clamp-2 leading-snug">
                 {rg!.summary}
               </span>
             </a>

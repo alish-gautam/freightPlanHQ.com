@@ -9,42 +9,51 @@ import { BRAND_NAME } from '../../lib/site';
   description={`Terms of Use for ${BRAND_NAME} freight and packaging planning tools.`}
   canonicalPath="terms"
 >
-  <div class="container-narrow py-6 sm:py-10">
-    <Breadcrumbs items={[{ label: 'Terms of Use' }]} />
+  <!-- Top Breadcrumb Bar -->
+  <div class="bg-canvas border-b border-hairline px-4 sm:px-6 lg:px-8 py-2.5">
+    <div class="max-w-4xl mx-auto">
+      <Breadcrumbs items={[{ label: 'Terms of Use' }]} />
+    </div>
+  </div>
 
-    <header class="mt-4 mb-8">
-      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+  <div class="container-narrow py-8 sm:py-12">
+    <header class="mb-8">
+      <div class="inline-flex items-center gap-1.5 bg-canvas-elevated border border-hairline rounded-full px-3 py-1 text-xs text-mute mb-3 shadow-2xs">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block animate-pulse"></span>
+        <span class="font-mono uppercase tracking-wider font-semibold">LEGAL TERMS</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink mb-3 leading-tight">
         Terms of Use
       </h1>
-      <p class="text-base text-gray-600 leading-relaxed max-w-2xl m-0">
+      <p class="text-sm sm:text-base text-body leading-relaxed max-w-2xl m-0">
         Terms governing the use of this free freight planning and calculation utility.
       </p>
     </header>
 
-    <div class="prose max-w-none space-y-6 text-sm text-gray-700 leading-relaxed">
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-lg font-bold text-gray-950 mb-2">1. Use of the Utility</h2>
+    <div class="space-y-8 text-sm text-body leading-relaxed">
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">1. Use of the Utility</h2>
         <p>
           {BRAND_NAME} provides free web-based calculation tools for cargo dimensioning, packaging planning, pallet layout estimation, and freight density evaluation. You may use these tools for personal or commercial planning purposes.
         </p>
       </section>
 
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-lg font-bold text-gray-950 mb-2">2. No Commercial or Legal Warranty</h2>
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">2. No Commercial or Legal Warranty</h2>
         <p>
           All calculations, visual layout representations, and reference presets are provided "as is" and "as available" without warranty of any kind, either express or implied. While we strive for rigorous mathematical correctness, real-world freight loading involves physical variables (including package compression, pallet sag, strapping tension, vehicle axle distributions, and carrier tariff revisions) that cannot be modeled in a generalized web tool.
         </p>
       </section>
 
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-lg font-bold text-gray-950 mb-2">3. Limitation of Liability</h2>
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">3. Limitation of Liability</h2>
         <p>
           In no event shall {BRAND_NAME}, its authors, or operators be liable for any direct, indirect, incidental, consequential, or punitive damages arising from the use of this website, including but not limited to carrier re-weigh inspection charges, freight re-classification surcharges, missed vessel cutoffs, container demurrage, or damaged cargo.
         </p>
       </section>
 
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-lg font-bold text-gray-950 mb-2">4. Intellectual Property</h2>
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">4. Intellectual Property</h2>
         <p>
           The layout engines, calculation implementations, design systems, and original text documentation on this site are protected by copyright. Automated scraping of the website is prohibited.
         </p>

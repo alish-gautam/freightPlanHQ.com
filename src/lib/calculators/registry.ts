@@ -117,17 +117,17 @@ export const calculators: CalculatorMeta[] = [
       'This is a density-based planning estimate, not an official NMFC commodity classification or carrier tariff guarantee.',
     sourceIds: ['nmfta-density-structure'],
     relatedCalculators: ['freight-density-calculator', 'cbm-calculator', 'pallet-calculator'],
-    relatedGuides: ['freight-class-chart', 'how-to-calculate-freight-class', 'nmfc-density-class-changes'],
+    relatedGuides: ['freight-class-chart', 'how-to-calculate-freight-class', 'nmfc-2025-changes'],
     faqs: [
       {
         question: 'What is freight class?',
         answer:
-          'Freight class is a standardized classification system defined by the NMFTA (National Motor Freight Traffic Association) for LTL (less-than-truckload) freight in North America. It categorizes commodities into 18 numerical classes from 50 (densest, lowest cost per cwt) to 500 (lightest, highest cost).',
+          'Historically, the National Motor Freight Classification (NMFC) catalog defined 18 numerical classes ranging from Class 50 (densest) to Class 500 (lightest) based on four transport characteristics: density, stowability, handling, and liability. In contrast, this calculator evaluates shipment density against the standardized 13-subprovision density structure (ranging from Class 50 up to Class 400) widely used across North American LTL rating. Official commodity-specific NMFC classifications are assigned exclusively by NMFTA tariffs for specific item numbers—which may include non-density factors or fixed ratings—and cannot be determined by mathematical density alone.',
       },
       {
         question: 'Is density the only factor determining freight class?',
         answer:
-          'No. While NMFTA reforms have transitioned many general commodity items to pure density scales, classification historically evaluates four characteristics: density, stowability, handling, and liability. Special commodity-specific rules still apply to hazardous materials, refrigerated cargo, and high-value freight.',
+          'No. While NMFTA reforms and carrier rules tariffs increasingly map general freight to the standardized 13-subprovision density scale, official NMFC commodity classifications still govern items with specific catalog codes. Official classification evaluates all four historical transport characteristics—density, handling, stowability, and liability (such as perishability, hazardous materials, or high theft value). This calculator provides a mathematical density-based estimate; shipments governed by commodity-specific item numbers or carrier exception tariffs may be rated differently.',
       },
       {
         question: 'How do I avoid freight re-classification penalties?',
@@ -257,7 +257,7 @@ export const calculators: CalculatorMeta[] = [
       'Does not model box bulging, strapping tension, or shrink-wrap compression.',
     ],
     disclaimer:
-      'Actual pallet loading requires proper securing, weight distribution, and warehouse clearance allowances.',
+      'Geometric spatial layout estimate only. Does not constitute an engineering determination of carton compression strength, pallet overhang safety, or transit stability. Verify box compression ratings (ECT) and securing methods prior to transport.',
     sourceIds: ['iso-6780', 'epal-euro-pallet'],
     relatedCalculators: ['pallets-per-container-calculator', 'container-loading-calculator', 'box-size-calculator'],
     relatedGuides: ['standard-pallet-sizes', 'ti-hi-pallet-patterns', 'how-to-measure-freight'],
@@ -272,7 +272,7 @@ export const calculators: CalculatorMeta[] = [
       },
       {
         question: 'Should boxes overhang the pallet edge?',
-        answer: 'Generally, no. Overhang can reduce corrugated box stacking strength by up to 30% and exposes cartons to puncture damage during transit and racking.',
+        answer: 'Generally, no. Overhang removes direct deck support from underneath the carton corners—where ~60–70% of corrugated compressive strength is concentrated—and exposes packaging to puncture damage during forklift handling and racking.',
       },
     ],
   },
@@ -780,7 +780,7 @@ export const calculators: CalculatorMeta[] = [
       'Carrier linear foot thresholds, cubic capacity rules, and pricing penalties vary by carrier tariff.',
     sourceIds: ['linear-feet-convention'],
     relatedCalculators: ['loading-meter-calculator', 'pallet-calculator'],
-    relatedGuides: ['standard-pallet-sizes', 'how-to-measure-freight'],
+    relatedGuides: ['ltl-linear-feet-explained', 'standard-pallet-sizes', 'how-to-measure-freight'],
     faqs: [
       {
         question: 'What is the LTL linear foot rule?',

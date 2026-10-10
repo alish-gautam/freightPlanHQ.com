@@ -17,8 +17,43 @@ const { title, description, canonicalPath, type, schema, noindex } = Astro.props
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
+    <!-- Anti-FOUC Theme Initialization Script before paint -->
+    <script is:inline>
+      (function() {
+        try {
+          function applyTheme(isDark) {
+            if (isDark) {
+              document.documentElement.classList.add('dark');
+            } else {
+              document.documentElement.classList.remove('dark');
+            }
+            var meta = document.getElementById('meta-theme-color');
+            if (meta) {
+              meta.setAttribute('content', isDark ? '#090d16' : '#f8fafc');
+            }
+          }
+
+          var stored = localStorage.getItem('theme');
+          var mediaQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+          var prefersDark = mediaQuery ? mediaQuery.matches : false;
+          var isDark = stored === 'dark' || (!stored && prefersDark);
+          applyTheme(isDark);
+
+          if (mediaQuery && !window.__themeListenerAttached) {
+            window.__themeListenerAttached = true;
+            mediaQuery.addEventListener('change', function(e) {
+              if (!localStorage.getItem('theme')) {
+                applyTheme(e.matches);
+                window.dispatchEvent(new CustomEvent('theme-changed', { detail: { isDark: e.matches } }));
+              }
+            });
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <SeoHead
       title={title}
       description={description}
@@ -28,14 +63,14 @@ const { title, description, canonicalPath, type, schema, noindex } = Astro.props
       noindex={noindex}
     />
   </head>
-  <body class="min-h-screen flex flex-col bg-gray-50 text-gray-800 antialiased selection:bg-blue-100 selection:text-blue-900">
+  <body class="min-h-screen flex flex-col bg-canvas text-body font-sans antialiased">
     <a href="#main-content" class="skip-link">
       Skip to main content
     </a>
 
     <Header />
 
-    <main id="main-content" class="flex-1">
+    <main id="main-content" class="flex-1 w-full" tabindex="-1">
       <slot />
     </main>
 

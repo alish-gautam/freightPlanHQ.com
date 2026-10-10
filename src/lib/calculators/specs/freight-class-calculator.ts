@@ -83,7 +83,7 @@ const spec: CalculatorSpec = {
       ],
       links: [
         { href: '/guides/how-to-calculate-freight-class/', label: 'How freight class is calculated' },
-        { href: '/guides/nmfc-density-class-changes/', label: 'NMFC density class changes' },
+        { href: '/guides/nmfc-2025-changes/', label: 'NMFC 2025 changes' },
       ],
     };
   },

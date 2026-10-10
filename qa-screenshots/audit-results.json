@@ -1,0 +1,3043 @@
+{
+  "screenshots": [
+    {
+      "page": "homepage",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\homepage\\light_320px.png"
+    },
+    {
+      "page": "homepage",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\homepage\\light_360px.png"
+    },
+    {
+      "page": "homepage",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\homepage\\light_390px.png"
+    },
+    {
+      "page": "homepage",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\homepage\\light_768px.png"
+    },
+    {
+      "page": "homepage",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\homepage\\light_1024px.png"
+    },
+    {
+      "page": "homepage",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\homepage\\light_1440px.png"
+    },
+    {
+      "page": "homepage",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\homepage\\dark_320px.png"
+    },
+    {
+      "page": "homepage",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\homepage\\dark_360px.png"
+    },
+    {
+      "page": "homepage",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\homepage\\dark_390px.png"
+    },
+    {
+      "page": "homepage",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\homepage\\dark_768px.png"
+    },
+    {
+      "page": "homepage",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\homepage\\dark_1024px.png"
+    },
+    {
+      "page": "homepage",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\homepage\\dark_1440px.png"
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\cbm-calculator\\light_320px.png"
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\cbm-calculator\\light_360px.png"
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\cbm-calculator\\light_390px.png"
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\cbm-calculator\\light_768px.png"
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\cbm-calculator\\light_1024px.png"
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\cbm-calculator\\light_1440px.png"
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\cbm-calculator\\dark_320px.png"
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\cbm-calculator\\dark_360px.png"
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\cbm-calculator\\dark_390px.png"
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\cbm-calculator\\dark_768px.png"
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\cbm-calculator\\dark_1024px.png"
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\cbm-calculator\\dark_1440px.png"
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\pallet-calculator\\light_320px.png"
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\pallet-calculator\\light_360px.png"
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\pallet-calculator\\light_390px.png"
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\pallet-calculator\\light_768px.png"
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\pallet-calculator\\light_1024px.png"
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\pallet-calculator\\light_1440px.png"
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\pallet-calculator\\dark_320px.png"
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\pallet-calculator\\dark_360px.png"
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\pallet-calculator\\dark_390px.png"
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\pallet-calculator\\dark_768px.png"
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\pallet-calculator\\dark_1024px.png"
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\pallet-calculator\\dark_1440px.png"
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\container-loading-calculator\\light_320px.png"
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\container-loading-calculator\\light_360px.png"
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\container-loading-calculator\\light_390px.png"
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\container-loading-calculator\\light_768px.png"
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\container-loading-calculator\\light_1024px.png"
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\container-loading-calculator\\light_1440px.png"
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\container-loading-calculator\\dark_320px.png"
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\container-loading-calculator\\dark_360px.png"
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\container-loading-calculator\\dark_390px.png"
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\container-loading-calculator\\dark_768px.png"
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\container-loading-calculator\\dark_1024px.png"
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\container-loading-calculator\\dark_1440px.png"
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\freight-class-calculator\\light_320px.png"
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\freight-class-calculator\\light_360px.png"
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\freight-class-calculator\\light_390px.png"
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\freight-class-calculator\\light_768px.png"
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\freight-class-calculator\\light_1024px.png"
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\freight-class-calculator\\light_1440px.png"
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\freight-class-calculator\\dark_320px.png"
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\freight-class-calculator\\dark_360px.png"
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\freight-class-calculator\\dark_390px.png"
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\freight-class-calculator\\dark_768px.png"
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\freight-class-calculator\\dark_1024px.png"
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\freight-class-calculator\\dark_1440px.png"
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\dimensional-weight-calculator\\light_320px.png"
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\dimensional-weight-calculator\\light_360px.png"
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\dimensional-weight-calculator\\light_390px.png"
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\dimensional-weight-calculator\\light_768px.png"
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\dimensional-weight-calculator\\light_1024px.png"
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\dimensional-weight-calculator\\light_1440px.png"
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\dimensional-weight-calculator\\dark_320px.png"
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\dimensional-weight-calculator\\dark_360px.png"
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\dimensional-weight-calculator\\dark_390px.png"
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\dimensional-weight-calculator\\dark_768px.png"
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\dimensional-weight-calculator\\dark_1024px.png"
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\dimensional-weight-calculator\\dark_1440px.png"
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\linear-feet-calculator\\light_320px.png"
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\linear-feet-calculator\\light_360px.png"
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\linear-feet-calculator\\light_390px.png"
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\linear-feet-calculator\\light_768px.png"
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\linear-feet-calculator\\light_1024px.png"
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\linear-feet-calculator\\light_1440px.png"
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\linear-feet-calculator\\dark_320px.png"
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\linear-feet-calculator\\dark_360px.png"
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\linear-feet-calculator\\dark_390px.png"
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\linear-feet-calculator\\dark_768px.png"
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\linear-feet-calculator\\dark_1024px.png"
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\linear-feet-calculator\\dark_1440px.png"
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\loading-meter-calculator\\light_320px.png"
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\loading-meter-calculator\\light_360px.png"
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\loading-meter-calculator\\light_390px.png"
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\loading-meter-calculator\\light_768px.png"
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\loading-meter-calculator\\light_1024px.png"
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\loading-meter-calculator\\light_1440px.png"
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\loading-meter-calculator\\dark_320px.png"
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\loading-meter-calculator\\dark_360px.png"
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\loading-meter-calculator\\dark_390px.png"
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\loading-meter-calculator\\dark_768px.png"
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\loading-meter-calculator\\dark_1024px.png"
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\loading-meter-calculator\\dark_1440px.png"
+    },
+    {
+      "page": "guide-hub",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-hub\\light_320px.png"
+    },
+    {
+      "page": "guide-hub",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-hub\\light_360px.png"
+    },
+    {
+      "page": "guide-hub",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-hub\\light_390px.png"
+    },
+    {
+      "page": "guide-hub",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-hub\\light_768px.png"
+    },
+    {
+      "page": "guide-hub",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-hub\\light_1024px.png"
+    },
+    {
+      "page": "guide-hub",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-hub\\light_1440px.png"
+    },
+    {
+      "page": "guide-hub",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-hub\\dark_320px.png"
+    },
+    {
+      "page": "guide-hub",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-hub\\dark_360px.png"
+    },
+    {
+      "page": "guide-hub",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-hub\\dark_390px.png"
+    },
+    {
+      "page": "guide-hub",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-hub\\dark_768px.png"
+    },
+    {
+      "page": "guide-hub",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-hub\\dark_1024px.png"
+    },
+    {
+      "page": "guide-hub",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-hub\\dark_1440px.png"
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-nmfc-2025-changes\\light_320px.png"
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-nmfc-2025-changes\\light_360px.png"
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-nmfc-2025-changes\\light_390px.png"
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-nmfc-2025-changes\\light_768px.png"
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-nmfc-2025-changes\\light_1024px.png"
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-nmfc-2025-changes\\light_1440px.png"
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-nmfc-2025-changes\\dark_320px.png"
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-nmfc-2025-changes\\dark_360px.png"
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-nmfc-2025-changes\\dark_390px.png"
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-nmfc-2025-changes\\dark_768px.png"
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-nmfc-2025-changes\\dark_1024px.png"
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-nmfc-2025-changes\\dark_1440px.png"
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-ltl-linear-feet\\light_320px.png"
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-ltl-linear-feet\\light_360px.png"
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-ltl-linear-feet\\light_390px.png"
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-ltl-linear-feet\\light_768px.png"
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-ltl-linear-feet\\light_1024px.png"
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-ltl-linear-feet\\light_1440px.png"
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-ltl-linear-feet\\dark_320px.png"
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-ltl-linear-feet\\dark_360px.png"
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-ltl-linear-feet\\dark_390px.png"
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-ltl-linear-feet\\dark_768px.png"
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-ltl-linear-feet\\dark_1024px.png"
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\guide-ltl-linear-feet\\dark_1440px.png"
+    },
+    {
+      "page": "methodology",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\methodology\\light_320px.png"
+    },
+    {
+      "page": "methodology",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\methodology\\light_360px.png"
+    },
+    {
+      "page": "methodology",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\methodology\\light_390px.png"
+    },
+    {
+      "page": "methodology",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\methodology\\light_768px.png"
+    },
+    {
+      "page": "methodology",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\methodology\\light_1024px.png"
+    },
+    {
+      "page": "methodology",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\methodology\\light_1440px.png"
+    },
+    {
+      "page": "methodology",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\methodology\\dark_320px.png"
+    },
+    {
+      "page": "methodology",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\methodology\\dark_360px.png"
+    },
+    {
+      "page": "methodology",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\methodology\\dark_390px.png"
+    },
+    {
+      "page": "methodology",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\methodology\\dark_768px.png"
+    },
+    {
+      "page": "methodology",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\methodology\\dark_1024px.png"
+    },
+    {
+      "page": "methodology",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\methodology\\dark_1440px.png"
+    },
+    {
+      "page": "sources",
+      "theme": "light",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\sources\\light_320px.png"
+    },
+    {
+      "page": "sources",
+      "theme": "light",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\sources\\light_360px.png"
+    },
+    {
+      "page": "sources",
+      "theme": "light",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\sources\\light_390px.png"
+    },
+    {
+      "page": "sources",
+      "theme": "light",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\sources\\light_768px.png"
+    },
+    {
+      "page": "sources",
+      "theme": "light",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\sources\\light_1024px.png"
+    },
+    {
+      "page": "sources",
+      "theme": "light",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\sources\\light_1440px.png"
+    },
+    {
+      "page": "sources",
+      "theme": "dark",
+      "viewport": "320px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\sources\\dark_320px.png"
+    },
+    {
+      "page": "sources",
+      "theme": "dark",
+      "viewport": "360px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\sources\\dark_360px.png"
+    },
+    {
+      "page": "sources",
+      "theme": "dark",
+      "viewport": "390px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\sources\\dark_390px.png"
+    },
+    {
+      "page": "sources",
+      "theme": "dark",
+      "viewport": "768px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\sources\\dark_768px.png"
+    },
+    {
+      "page": "sources",
+      "theme": "dark",
+      "viewport": "1024px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\sources\\dark_1024px.png"
+    },
+    {
+      "page": "sources",
+      "theme": "dark",
+      "viewport": "1440px",
+      "path": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\sources\\dark_1440px.png"
+    }
+  ],
+  "contrastAudit": [
+    {
+      "theme": "light",
+      "element": "Page Heading (H1)",
+      "selector": "h1",
+      "foreground": "rgb(15, 23, 42)",
+      "background": "rgb(248, 250, 252)",
+      "measuredRatio": "17.06:1",
+      "threshold": "3:1",
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "element": "Body copy / lead paragraph",
+      "selector": "p",
+      "foreground": "rgb(51, 65, 85)",
+      "background": "rgb(248, 250, 252)",
+      "measuredRatio": "9.90:1",
+      "threshold": "4.5:1",
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "element": "Form label",
+      "selector": "label",
+      "foreground": "rgb(15, 23, 42)",
+      "background": "rgb(255, 255, 255)",
+      "measuredRatio": "17.85:1",
+      "threshold": "4.5:1",
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "element": "Form input text",
+      "selector": "input[data-id=\"qty\"]",
+      "foreground": "rgb(15, 23, 42)",
+      "background": "rgb(255, 255, 255)",
+      "measuredRatio": "17.85:1",
+      "threshold": "4.5:1",
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "element": "Button secondary",
+      "selector": "button[data-reset-calc]",
+      "foreground": "rgb(15, 23, 42)",
+      "background": "rgb(255, 255, 255)",
+      "measuredRatio": "17.85:1",
+      "threshold": "4.5:1",
+      "pass": true
+    },
+    {
+      "theme": "light",
+      "element": "Header brand link",
+      "selector": "header a",
+      "foreground": "rgb(51, 65, 85)",
+      "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.95)",
+      "measuredRatio": "N/A",
+      "threshold": "4.5:1",
+      "pass": false
+    },
+    {
+      "theme": "light",
+      "element": "Nav link",
+      "selector": "nav a",
+      "foreground": "rgb(51, 65, 85)",
+      "background": "oklab(0.999994 0.0000455678 0.0000200868 / 0.95)",
+      "measuredRatio": "N/A",
+      "threshold": "4.5:1",
+      "pass": false
+    },
+    {
+      "theme": "light",
+      "element": "Footer text",
+      "selector": "footer",
+      "foreground": "rgb(51, 65, 85)",
+      "background": "rgb(255, 255, 255)",
+      "measuredRatio": "10.35:1",
+      "threshold": "4.5:1",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "element": "Page Heading (H1)",
+      "selector": "h1",
+      "foreground": "rgb(248, 250, 252)",
+      "background": "rgb(9, 13, 22)",
+      "measuredRatio": "18.57:1",
+      "threshold": "3:1",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "element": "Body copy / lead paragraph",
+      "selector": "p",
+      "foreground": "rgb(203, 213, 225)",
+      "background": "rgb(9, 13, 22)",
+      "measuredRatio": "13.09:1",
+      "threshold": "4.5:1",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "element": "Form label",
+      "selector": "label",
+      "foreground": "rgb(248, 250, 252)",
+      "background": "rgb(17, 24, 39)",
+      "measuredRatio": "16.96:1",
+      "threshold": "4.5:1",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "element": "Form input text",
+      "selector": "input[data-id=\"qty\"]",
+      "foreground": "rgb(248, 250, 252)",
+      "background": "rgb(25, 35, 55)",
+      "measuredRatio": "15.01:1",
+      "threshold": "4.5:1",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "element": "Button secondary",
+      "selector": "button[data-reset-calc]",
+      "foreground": "rgb(248, 250, 252)",
+      "background": "rgb(25, 35, 55)",
+      "measuredRatio": "15.01:1",
+      "threshold": "4.5:1",
+      "pass": true
+    },
+    {
+      "theme": "dark",
+      "element": "Header brand link",
+      "selector": "header a",
+      "foreground": "rgb(203, 213, 225)",
+      "background": "oklab(0.210081 -0.00294439 -0.0316202 / 0.95)",
+      "measuredRatio": "N/A",
+      "threshold": "4.5:1",
+      "pass": false
+    },
+    {
+      "theme": "dark",
+      "element": "Nav link",
+      "selector": "nav a",
+      "foreground": "rgb(203, 213, 225)",
+      "background": "oklab(0.210081 -0.00294439 -0.0316202 / 0.95)",
+      "measuredRatio": "N/A",
+      "threshold": "4.5:1",
+      "pass": false
+    },
+    {
+      "theme": "dark",
+      "element": "Footer text",
+      "selector": "footer",
+      "foreground": "rgb(203, 213, 225)",
+      "background": "rgb(17, 24, 39)",
+      "measuredRatio": "11.95:1",
+      "threshold": "4.5:1",
+      "pass": true
+    }
+  ],
+  "darkModeVerification": {
+    "osPrefersDarkRespected": true,
+    "osPrefersLightRespected": true,
+    "manualToggleOnEveryPage": [
+      {
+        "page": "homepage",
+        "worked": true,
+        "stored": "dark"
+      },
+      {
+        "page": "cbm-calculator",
+        "worked": true,
+        "stored": "light"
+      },
+      {
+        "page": "pallet-calculator",
+        "worked": true,
+        "stored": "dark"
+      },
+      {
+        "page": "container-loading-calculator",
+        "worked": true,
+        "stored": "light"
+      },
+      {
+        "page": "freight-class-calculator",
+        "worked": true,
+        "stored": "dark"
+      }
+    ],
+    "persistsAcrossReload": true,
+    "dynamicOsPreferenceRespected": true,
+    "themeColorMetaDark": "#090d16",
+    "themeColorMetaLight": "#f8fafc",
+    "toggleAccessibility": {
+      "light": {
+        "label": "Switch to dark mode",
+        "pressed": "false"
+      },
+      "dark": {
+        "label": "Switch to light mode",
+        "pressed": "true"
+      }
+    },
+    "mobileNavKeyboard": {
+      "opened": true,
+      "closed": true
+    }
+  },
+  "responsiveAudit": [
+    {
+      "page": "homepage",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "homepage",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "homepage",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "homepage",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "homepage",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "homepage",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "homepage",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "homepage",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "homepage",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "homepage",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "homepage",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "homepage",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "cbm-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "pallet-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "container-loading-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "freight-class-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "linear-feet-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "loading-meter-calculator",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "guide-hub",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "guide-hub",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "guide-hub",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "guide-hub",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "guide-hub",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "guide-hub",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "guide-hub",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "guide-hub",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "guide-hub",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "guide-hub",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "guide-hub",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "guide-hub",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "methodology",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "methodology",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "methodology",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "methodology",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "methodology",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "methodology",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "methodology",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "methodology",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "methodology",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "methodology",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "methodology",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "methodology",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "sources",
+      "theme": "light",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "sources",
+      "theme": "light",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "sources",
+      "theme": "light",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "sources",
+      "theme": "light",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "sources",
+      "theme": "light",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "sources",
+      "theme": "light",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    },
+    {
+      "page": "sources",
+      "theme": "dark",
+      "viewport": "320px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 320,
+        "innerWidth": 320
+      }
+    },
+    {
+      "page": "sources",
+      "theme": "dark",
+      "viewport": "360px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 360,
+        "innerWidth": 360
+      }
+    },
+    {
+      "page": "sources",
+      "theme": "dark",
+      "viewport": "390px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 390,
+        "innerWidth": 390
+      }
+    },
+    {
+      "page": "sources",
+      "theme": "dark",
+      "viewport": "768px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 768,
+        "innerWidth": 768
+      }
+    },
+    {
+      "page": "sources",
+      "theme": "dark",
+      "viewport": "1024px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1024,
+        "innerWidth": 1024
+      }
+    },
+    {
+      "page": "sources",
+      "theme": "dark",
+      "viewport": "1440px",
+      "overflow": {
+        "hasOverflow": false,
+        "scrollWidth": 1440,
+        "innerWidth": 1440
+      }
+    }
+  ],
+  "calculatorVerification": {},
+  "allCalculatorsInteractiveAudit": [
+    {
+      "slug": "freight-class-calculator",
+      "path": "/freight-class-calculator/",
+      "initialResult": "92.5",
+      "updatedResult": "100",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "cbm-calculator",
+      "path": "/cbm-calculator/",
+      "initialResult": "11.520 m³",
+      "updatedResult": "17.280 m³",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "pallet-calculator",
+      "path": "/pallet-calculator/",
+      "initialResult": "60",
+      "updatedResult": "36",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "dimensional-weight-calculator",
+      "path": "/dimensional-weight-calculator/",
+      "initialResult": "24.00 lb",
+      "updatedResult": "16.00 lb",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "container-loading-calculator",
+      "path": "/container-loading-calculator/",
+      "initialResult": "6 containers (278 in first)",
+      "updatedResult": "4 containers (430 in first)",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "freight-density-calculator",
+      "path": "/freight-density-calculator/",
+      "initialResult": "12.49 lb/ft³",
+      "updatedResult": "18.73 lb/ft³",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "air-freight-chargeable-weight-calculator",
+      "path": "/air-freight-chargeable-weight-calculator/",
+      "initialResult": "320.00 kg",
+      "updatedResult": "300.00 kg",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "lcl-freight-calculator",
+      "path": "/lcl-freight-calculator/",
+      "initialResult": "19.200 W/M",
+      "updatedResult": "28.800 W/M",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "pallets-per-container-calculator",
+      "path": "/pallets-per-container-calculator/",
+      "initialResult": "11",
+      "updatedResult": "18",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "loading-meter-calculator",
+      "path": "/loading-meter-calculator/",
+      "initialResult": "4.00 LDM",
+      "updatedResult": "6.20 LDM",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "linear-feet-calculator",
+      "path": "/linear-feet-calculator/",
+      "initialResult": "20.0 ft",
+      "updatedResult": "31.5 ft",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "package-girth-calculator",
+      "path": "/package-girth-calculator/",
+      "initialResult": "124.00 in",
+      "updatedResult": "139.00 in",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "box-size-calculator",
+      "path": "/box-size-calculator/",
+      "initialResult": "33.0 × 33.0 × 23.0 cm",
+      "updatedResult": "33.0 × 33.0 × 38.0 cm",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    },
+    {
+      "slug": "box-volume-calculator",
+      "path": "/box-volume-calculator/",
+      "initialResult": "96.000 L",
+      "updatedResult": "144.000 L",
+      "reactive": true,
+      "unitChangeTested": true,
+      "resetRestored": true,
+      "copyButtonWorked": true,
+      "validationHandled": true,
+      "ariaLivePolite": true
+    }
+  ],
+  "accessibilityAudit": [
+    {
+      "page": "homepage",
+      "path": "/",
+      "violationsCount": 0,
+      "violations": [],
+      "passesCount": 19,
+      "incompleteCount": 1
+    },
+    {
+      "page": "cbm-calculator",
+      "path": "/cbm-calculator/",
+      "violationsCount": 0,
+      "violations": [],
+      "passesCount": 31,
+      "incompleteCount": 0
+    },
+    {
+      "page": "pallet-calculator",
+      "path": "/pallet-calculator/",
+      "violationsCount": 0,
+      "violations": [],
+      "passesCount": 32,
+      "incompleteCount": 1
+    },
+    {
+      "page": "dimensional-weight-calculator",
+      "path": "/dimensional-weight-calculator/",
+      "violationsCount": 0,
+      "violations": [],
+      "passesCount": 32,
+      "incompleteCount": 0
+    },
+    {
+      "page": "linear-feet-calculator",
+      "path": "/linear-feet-calculator/",
+      "violationsCount": 0,
+      "violations": [],
+      "passesCount": 32,
+      "incompleteCount": 1
+    },
+    {
+      "page": "guide-hub",
+      "path": "/guides/",
+      "violationsCount": 0,
+      "violations": [],
+      "passesCount": 19,
+      "incompleteCount": 0
+    },
+    {
+      "page": "guide-nmfc-2025-changes",
+      "path": "/guides/nmfc-2025-changes/",
+      "violationsCount": 0,
+      "violations": [],
+      "passesCount": 19,
+      "incompleteCount": 0
+    },
+    {
+      "page": "guide-ltl-linear-feet",
+      "path": "/guides/ltl-linear-feet-explained/",
+      "violationsCount": 0,
+      "violations": [],
+      "passesCount": 19,
+      "incompleteCount": 0
+    },
+    {
+      "page": "methodology",
+      "path": "/methodology/",
+      "violationsCount": 0,
+      "violations": [],
+      "passesCount": 19,
+      "incompleteCount": 0
+    },
+    {
+      "page": "sources",
+      "path": "/sources/",
+      "violationsCount": 0,
+      "violations": [],
+      "passesCount": 19,
+      "incompleteCount": 0
+    }
+  ],
+  "keyboardAudit": {
+    "testedPage": "/cbm-calculator/",
+    "tabSteps": [
+      {
+        "tag": "A",
+        "type": null,
+        "dataId": null,
+        "className": "skip-link"
+      },
+      {
+        "tag": "A",
+        "type": null,
+        "dataId": null,
+        "className": "flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-lg"
+      },
+      {
+        "tag": "A",
+        "type": null,
+        "dataId": null,
+        "className": "inline-flex min-h-10 items-center text-xs lg:text-sm font-semibold px-3 py-1.5 rounded-lg transition-colors no-underline text-body hover:text-ink hover:bg-surface-subtle"
+      },
+      {
+        "tag": "A",
+        "type": null,
+        "dataId": null,
+        "className": "inline-flex min-h-10 items-center text-xs lg:text-sm font-semibold px-3 py-1.5 rounded-lg transition-colors no-underline text-body hover:text-ink hover:bg-surface-subtle"
+      },
+      {
+        "tag": "A",
+        "type": null,
+        "dataId": null,
+        "className": "inline-flex min-h-10 items-center text-xs lg:text-sm font-semibold px-3 py-1.5 rounded-lg transition-colors no-underline text-body hover:text-ink hover:bg-surface-subtle"
+      },
+      {
+        "tag": "A",
+        "type": null,
+        "dataId": null,
+        "className": "inline-flex min-h-10 items-center text-xs lg:text-sm font-semibold px-3 py-1.5 rounded-lg transition-colors no-underline text-body hover:text-ink hover:bg-surface-subtle"
+      }
+    ],
+    "hasActiveElementProgression": true
+  },
+  "faviconVerification": {
+    "rendered_16x16": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\favicon\\favicon-16x16.png",
+    "rendered_32x32": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\favicon\\favicon-32x32.png",
+    "rendered_48x48": "C:\\CodingProgramming\\RealProjects\\freightplanHQ.com\\qa-screenshots\\favicon\\favicon-48x48.png"
+  },
+  "seoAndUrlsVerification": {
+    "totalChecked": 42,
+    "calculatorsCount": 14,
+    "canonicalGuidesCount": 19,
+    "staticAndHubRoutesCount": 9,
+    "legacyRedirectsCount": 1,
+    "inventoryBreakdown": {
+      "calculators": 14,
+      "canonicalGuides": 19,
+      "guidesHub": 1,
+      "homepage": 1,
+      "staticTrustAndLegal": 7,
+      "legacyRedirects": 1,
+      "errorPage": 1,
+      "totalHtmlFilesInDist": 44,
+      "totalRoutesBuiltByAstro": 43
+    },
+    "allSingleH1": true,
+    "allHaveTitle": true,
+    "allHaveDescription": true,
+    "allHaveCanonical": true,
+    "allHaveJsonLd": true,
+    "legacyRedirectCheck": {
+      "path": "/guides/nmfc-density-class-changes/",
+      "finalUrl": "http://localhost:4321/guides/nmfc-2025-changes/",
+      "title": "NMFC 2025 Changes — Historical Transition & Current Rules",
+      "hasCanonical": true
+    }
+  },
+  "consoleErrors": []
+}

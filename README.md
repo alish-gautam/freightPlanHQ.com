@@ -1,46 +1,30 @@
-# Astro Starter Kit: Basics
+# FreightPlanHQ
 
-```sh
-npm create astro@latest -- --template basics
+A professional, deterministic freight and packaging planning platform providing 14 client-executed calculators and 18 reference guides.
+
+## Features
+- **14 Precision Calculators**: Freight class, CBM, pallet packing (TI×HI), dimensional weight, 3D container packing, loading meters, linear feet, and more.
+- **Client-Side Deterministic Math**: 100% in-browser calculation with zero tracking and zero server logging of cargo specifications.
+- **First-Class Dark Mode**: WCAG-conscious accessible palette with smooth theme toggling and persistent preference.
+- **Custom Branding**: Dedicated FreightPlanHQ 3D isometric cargo container planning mark and favicons.
+- **Auditable Formulas**: Every calculator features step-by-step engine audit trails and authoritative source citations.
+
+## Development
+
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Testing & Quality Assurance
 
-## 🚀 Project Structure
+```bash
+# Run Vitest test suite
+npm test
 
-Inside of your Astro project, you'll see the following folders and files:
+# Run Astro TypeScript and template diagnostics
+npm run check
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+# Build production bundle
+npm run build
 ```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

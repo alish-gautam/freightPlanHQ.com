@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>403 — Access Unavailable · FreightPlanHQ</title>
+  <meta name="description" content="You don't have permission to access this resource. Explore public freight calculators and reference guides." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" href="/favicon.ico" />
+  <script>
+    (function() {
+      try {
+        var stored = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    :root {
+      --canvas: #f8fafc;
+      --canvas-elevated: #ffffff;
+      --surface-subtle: #f1f5f9;
+      --surface-card: #ffffff;
+      --ink: #0f172a;
+      --body: #334155;
+      --mute: #475569;
+      --faint: #64748b;
+      --hairline: #e2e8f0;
+      --hairline-strong: #64748b;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --focus-ring: #2563eb;
+      --warning-soft: #fffbeb;
+      --warning-border: #d97706;
+      --warning-text: #b45309;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not(.light) {
+        --canvas: #090d16;
+        --canvas-elevated: #111827;
+        --surface-subtle: #192337;
+        --surface-card: #141d2e;
+        --ink: #f8fafc;
+        --body: #cbd5e1;
+        --mute: #94a3b8;
+        --faint: #64748b;
+        --hairline: #26334a;
+        --hairline-strong: #60799f;
+        --accent: #3b82f6;
+        --accent-hover: #60a5fa;
+        --focus-ring: #60a5fa;
+        --warning-soft: rgba(245, 158, 11, 0.14);
+        --warning-border: rgba(245, 158, 11, 0.65);
+        --warning-text: #f59e0b;
+      }
+    }
+    html.dark {
+      --canvas: #090d16;
+      --canvas-elevated: #111827;
+      --surface-subtle: #192337;
+      --surface-card: #141d2e;
+      --ink: #f8fafc;
+      --body: #cbd5e1;
+      --mute: #94a3b8;
+      --faint: #64748b;
+      --hairline: #26334a;
+      --hairline-strong: #60799f;
+      --accent: #3b82f6;
+      --accent-hover: #60a5fa;
+      --focus-ring: #60a5fa;
+      --warning-soft: rgba(245, 158, 11, 0.14);
+      --warning-border: rgba(245, 158, 11, 0.65);
+      --warning-text: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--canvas);
+      color: var(--body);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    :focus-visible {
+      outline: 2px solid var(--focus-ring);
+      outline-offset: 2px;
+    }
+    .header {
+      border-bottom: 1px solid var(--hairline);
+      background-color: var(--canvas-elevated);
+      padding: 0.875rem 1rem;
+    }
+    .header-inner {
+      max-width: 58rem;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+    .brand-icon-wrap {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.5rem;
+      background-color: #0f172a;
+      border: 1px solid var(--hairline);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.25rem;
+    }
+    html.dark .brand-icon-wrap {
+      background-color: #ffffff;
+    }
+    .brand-accent { color: var(--accent); }
+    .brand-tag {
+      font-size: 0.6875rem;
+      font-family: ui-monospace, monospace;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0.125rem 0.5rem;
+      border-radius: 0.25rem;
+      background: var(--surface-subtle);
+      border: 1px solid var(--hairline);
+      color: var(--mute);
+    }
+    main {
+      flex: 1;
+      max-width: 58rem;
+      width: 100%;
+      margin: 0 auto;
+      padding: 3rem 1rem 4rem;
+    }
+    .hero-center {
+      text-align: center;
+      max-width: 38rem;
+      margin: 0 auto 2.5rem;
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.375rem 0.875rem;
+      border-radius: 9999px;
+      background-color: var(--warning-soft);
+      border: 1px solid var(--warning-border);
+      color: var(--warning-text);
+      font-family: ui-monospace, monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.25rem;
+    }
+    .status-badge-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 9999px;
+      background-color: var(--warning-text);
+    }
+    .illustration-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+    .illustration-box {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 1rem;
+      background-color: var(--surface-subtle);
+      border: 1px solid var(--hairline-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem;
+    }
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    @media (max-width: 640px) {
+      h1 { font-size: 1.75rem; }
+    }
+    .description {
+      font-size: 1.0625rem;
+      color: var(--body);
+      line-height: 1.55;
+      margin-bottom: 2rem;
+    }
+    .action-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.875rem;
+      margin-bottom: 2.5rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.625rem 1.25rem;
+      border-radius: 0.375rem;
+      text-decoration: none;
+      transition: all 0.15s ease;
+      cursor: pointer;
+      user-select: none;
+      min-height: 2.625rem;
+    }
+    .btn-primary {
+      background-color: var(--ink);
+      color: var(--canvas-elevated);
+      border: 1px solid var(--ink);
+    }
+    html.dark .btn-primary {
+      background-color: var(--ink);
+      color: #090d16;
+      border-color: var(--ink);
+    }
+    .btn-primary:hover { opacity: 0.92; }
+    .btn-secondary {
+      background-color: var(--canvas-elevated);
+      color: var(--ink);
+      border: 1px solid var(--hairline-strong);
+    }
+    html.dark .btn-secondary {
+      background-color: var(--surface-subtle);
+      color: var(--ink);
+      border-color: var(--hairline-strong);
+    }
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      background-color: var(--surface-subtle);
+    }
+    .card {
+      background-color: var(--canvas-elevated);
+      border: 1px solid var(--hairline);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      max-width: 38rem;
+      margin: 0 auto;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .card-header {
+      padding: 0.75rem 1.25rem;
+      background-color: var(--surface-subtle);
+      border-bottom: 1px solid var(--hairline);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .card-title {
+      font-size: 0.75rem;
+      font-family: ui-monospace, monospace;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--mute);
+    }
+    .card-nav {
+      list-style: none;
+      divide-y: 1px solid var(--hairline);
+    }
+    .card-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.875rem 1.25rem;
+      text-decoration: none;
+      color: var(--body);
+      border-bottom: 1px solid var(--hairline);
+      transition: background-color 0.15s ease;
+    }
+    .card-link:last-child { border-bottom: none; }
+    .card-link:hover {
+      background-color: var(--surface-subtle);
+    }
+    .card-link-title {
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 0.875rem;
+    }
+    .card-link-desc {
+      font-size: 0.75rem;
+      color: var(--mute);
+      margin-top: 0.125rem;
+    }
+    .card-footer {
+      padding: 0.875rem 1.25rem;
+      background-color: var(--surface-subtle);
+      border-top: 1px solid var(--hairline);
+      font-size: 0.75rem;
+      color: var(--mute);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .card-footer a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .card-footer a:hover { text-decoration: underline; }
+    footer {
+      border-top: 1px solid var(--hairline);
+      background-color: var(--canvas-elevated);
+      padding: 1.25rem 1rem;
+      font-size: 0.75rem;
+      color: var(--mute);
+      text-align: center;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a href="/" class="brand-link" aria-label="FreightPlanHQ Home">
+        <div class="brand-icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" width="22" height="22">
+            <polygon points="16,4 27.5,9.8 16,15.5 4.5,9.8" fill="#38bdf8"/>
+            <line x1="16" y1="4" x2="16" y2="15.5" stroke="#0f172a" stroke-width="1.2"/>
+            <line x1="10.25" y1="6.9" x2="21.75" y2="12.65" stroke="#0f172a" stroke-width="1.2"/>
+            <polygon points="4.5,11.2 14.5,16.5 14.5,27.5 4.5,22.2" fill="#1d4ed8"/>
+            <line x1="8" y1="13.1" x2="8" y2="24.1" stroke="#0f172a" stroke-width="1"/>
+            <line x1="11.5" y1="14.9" x2="11.5" y2="25.9" stroke="#0f172a" stroke-width="1"/>
+            <polygon points="17.5,16.5 27.5,11.2 27.5,22.2 17.5,27.5" fill="#2563eb"/>
+            <line x1="20.8" y1="14.8" x2="20.8" y2="25.8" stroke="#0f172a" stroke-width="1"/>
+            <line x1="24.2" y1="13" x2="24.2" y2="24" stroke="#0f172a" stroke-width="1"/>
+            <rect x="19.5" y="17.5" width="4.5" height="3" rx="0.75" fill="#f59e0b" stroke="#0f172a" stroke-width="0.75"/>
+          </svg>
+        </div>
+        <span>Freight<span class="brand-accent">Plan</span><span style="font-size: 0.6875rem; text-transform: uppercase; color: var(--mute); margin-left: 0.2rem;">HQ</span></span>
+      </a>
+      <span class="brand-tag">Planning Utility</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero-center">
+      <div class="status-badge" role="status">
+        <span class="status-badge-dot" aria-hidden="true"></span>
+        <span>403 — ACCESS UNAVAILABLE</span>
+      </div>
+
+      <div class="illustration-wrap" aria-hidden="true">
+        <div class="illustration-box">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" width="32" height="32" style="color: var(--warning-text);">
+            <!-- Padlock / Cargo Seal Security Boundary -->
+            <rect x="6" y="13" width="20" height="15" rx="3" stroke-width="1.75"/>
+            <path d="M10 13V9A6 6 0 0 1 22 9V13" stroke-width="1.75" stroke-linecap="round"/>
+            <circle cx="16" cy="20.5" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+      </div>
+
+      <h1>403 — Access unavailable</h1>
+      <p class="description">
+        You don't have permission to access this resource. All standard freight planning tools, reference tables, and cargo calculators are publicly accessible from the homepage.
+      </p>
+
+      <div class="action-group">
+        <a href="/" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+          Return to Homepage
+        </a>
+        <a href="/guides/" class="btn btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+          Browse Reference Guides
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Publicly Available Calculators</span>
+        <a href="/" style="font-size: 0.75rem; color: var(--accent); text-decoration: none; font-weight: 600;">Browse All Tools &rarr;</a>
+      </div>
+      <div class="card-nav">
+        <a href="/cbm-calculator/" class="card-link">
+          <div>
+            <div class="card-link-title">CBM Calculator</div>
+            <div class="card-link-desc">Cubic meters, volumetric weight & container volume</div>
+          </div>
+          <span style="color: var(--accent); font-weight: bold;">&rarr;</span>
+        </a>
+        <a href="/pallet-calculator/" class="card-link">
+          <div>
+            <div class="card-link-title">Pallet Calculator</div>
+            <div class="card-link-desc">TI×HI stacking, layer layouts & pallet height</div>
+          </div>
+          <span style="color: var(--accent); font-weight: bold;">&rarr;</span>
+        </a>
+        <a href="/container-loading-calculator/" class="card-link">
+          <div>
+            <div class="card-link-title">Container Loading Calculator</div>
+            <div class="card-link-desc">Floor space optimization for 20ft & 40ft containers</div>
+          </div>
+          <span style="color: var(--accent); font-weight: bold;">&rarr;</span>
+        </a>
+        <a href="/freight-class-calculator/" class="card-link">
+          <div>
+            <div class="card-link-title">Freight Class Calculator</div>
+            <div class="card-link-desc">NMFC density calculation for LTL freight</div>
+          </div>
+          <span style="color: var(--accent); font-weight: bold;">&rarr;</span>
+        </a>
+      </div>
+      <div class="card-footer">
+        <div>Believe this is an error? Visit <a href="/contact/">Contact & Feedback</a></div>
+        <div style="font-family: ui-monospace, monospace; font-size: 0.6875rem;">CODE: HTTP_403_FORBIDDEN</div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 FreightPlanHQ · Pure client-executed mathematical planning engines.
+  </footer>
+</body>
+</html>

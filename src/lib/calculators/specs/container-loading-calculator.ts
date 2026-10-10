@@ -4,7 +4,7 @@ import { equipment, EQUIPMENT_NOTE, equipmentById } from '../../equipment';
 import { sourceById } from '../../sources';
 import { Checker } from '../../validation';
 import { toKg } from '../../units';
-import { fail, type CalculatorSpec, type CalcResult } from '../types';
+import { fail, type CalculatorSpec, type CalcResult, type Stat } from '../types';
 import { LENGTH_OPTIONS, WEIGHT_OPTIONS, bool, fmtKg, fmtLen, lengthUnit, num, str, toMm, weightUnit } from './shared';
 import { stackDiagrams } from './diagram-helpers';
 
@@ -130,32 +130,82 @@ const spec: CalculatorSpec = {
       volume: 'Volume is limiting: the usable space is almost fully used by this arrangement.',
     };
     const interp = [
-      `This arrangement loaded ${fmt(r.loaded, 'count')} piece${r.loaded === 1 ? '' : 's'}; ${fmt(r.remaining, 'count')} remain${r.remaining === 1 ? 's' : ''}.`,
+      `This arrangement loads ${fmt(r.loaded, 'count')} piece${r.loaded === 1 ? '' : 's'} into one ${cont.name} from a total order of ${fmt(total, 'count')} piece${total === 1 ? '' : 's'} (${fmt(r.remaining, 'count')} remaining after the first container).`,
+      r.containersRequired !== null
+        ? `Based on packing ${fmt(r.loaded, 'count')} pieces per container, approximately ${fmt(r.containersRequired, 'count')} ${r.containersRequired === 1 ? 'container' : 'containers'} will be required to ship the full order (planning estimate based on selected equipment and packing assumptions; real-world loading may vary with dunnage, axle weight limits, and weight distribution).`
+        : '',
+      `Recommended capacity is ${fmt(r.recommendedCapacity, 'count')} pieces per container under payload and dimensional constraints (geometric capacity is ${fmt(r.geometricCapacity, 'count')} pieces).`,
       limitText[r.limit],
-    ];
+    ].filter(Boolean);
     if (r.payloadCapacity !== null && r.limit !== 'payload') interp.push(`The payload limit would allow ${fmt(r.payloadCapacity, 'count')} pieces, so weight is not the constraint here.`);
     const warnings: string[] = [];
     if ((str(v.pkg) === 'pallet' || str(v.pkg) === 'drum') && !upright) warnings.push('Pallets and drums are normally kept upright. Turn on “Keep pieces upright” unless you are sure they can be laid down.');
     if (r.reducedSearch) warnings.push('This piece size was large and awkward, so a simplified floor search was used. Another arrangement may fit slightly more.');
     const diagrams = stackDiagrams({ placements: r.placements, binX: cont.length, binY: cont.width, binZ: cont.height, unit: du, what: 'pieces', binName: 'container', endLabel: 'Back wall (x = 0) → doors at far end' });
+
+    const stats: Stat[] = [
+      ...(r.containersRequired !== null
+        ? [
+            {
+              label: 'Containers required',
+              value: `${fmt(r.containersRequired, 'count')} ${r.containersRequired === 1 ? 'container' : 'containers'}`,
+              hint: `Planning estimate: ⌈${fmt(total, 'count')} order pieces ÷ ${fmt(r.loaded, 'count')} loaded/container⌉`,
+            },
+          ]
+        : []),
+      {
+        label: 'Pieces loaded (1 container)',
+        value: `${fmt(r.loaded, 'count')} of ${fmt(total, 'count')}`,
+        hint: `${fmt(r.loaded, 'count')} pieces packed in this container`,
+      },
+      {
+        label: 'Total order quantity',
+        value: fmt(total, 'count'),
+        hint: 'Total pieces in your shipment order',
+      },
+      {
+        label: 'Remaining quantity',
+        value: fmt(r.remaining, 'count'),
+        hint: r.remaining > 0 ? 'Unloaded after 1st container' : 'Entire order loaded in 1 container',
+      },
+      {
+        label: 'Recommended capacity',
+        value: fmt(r.recommendedCapacity, 'count'),
+        hint:
+          r.payloadCapacity !== null && r.payloadCapacity < r.geometricCapacity
+            ? `Capacity under payload/dimensional constraints (payload limit ${fmt(r.payloadCapacity, 'count')} pieces)`
+            : `Capacity under payload/dimensional constraints (geometric fit ${fmt(r.geometricCapacity, 'count')} pieces)`,
+      },
+      {
+        label: 'Geometric capacity',
+        value: fmt(r.geometricCapacity, 'count'),
+        hint: 'Theoretical 3D packing capacity before payload or order quantity constraints',
+      },
+      { label: 'Cube utilization', value: pct(r.cubeUtilization), hint: 'Cargo volume ÷ internal container volume' },
+      { label: 'Weight loaded', value: fmtKg(r.weightKg, wu), hint: r.weightUtilization === null ? 'No payload limit set' : `${pct(r.weightUtilization)} of payload limit` },
+      { label: 'Unused volume', value: `${fixed(r.unusedVolumeM3, 2)} m³` },
+      { label: 'Layers', value: fmt(r.layers.length, 'count') },
+      { label: 'Loaded length used', value: fmtLen(r.usedLength, du) },
+    ];
+
     return {
       ok: true,
-      headline: { label: 'Pieces loaded', value: `${fmt(r.loaded, 'count')} of ${fmt(total, 'count')}`, sub: `${cont.name} · best feasible layout found` },
-      stats: [
-        { label: 'Loaded', value: fmt(r.loaded, 'count') },
-        { label: 'Remaining quantity', value: fmt(r.remaining, 'count') },
-        { label: 'Cube utilization', value: pct(r.cubeUtilization), hint: 'Cargo volume ÷ internal container volume' },
-        { label: 'Weight loaded', value: fmtKg(r.weightKg, wu), hint: r.weightUtilization === null ? 'No payload limit set' : `${pct(r.weightUtilization)} of payload limit` },
-        { label: 'Unused volume', value: `${fixed(r.unusedVolumeM3, 2)} m³` },
-        { label: 'Layers', value: fmt(r.layers.length, 'count') },
-        { label: 'Loaded length used', value: fmtLen(r.usedLength, du) },
-        { label: 'Geometric capacity', value: fmt(r.geometricCapacity, 'count'), hint: 'Before quantity and payload limits' },
-      ],
+      headline: {
+        label: 'Containers required & pieces loaded',
+        value:
+          r.containersRequired !== null
+            ? `${fmt(r.containersRequired, 'count')} ${r.containersRequired === 1 ? 'container' : 'containers'} (${fmt(r.loaded, 'count')} in first)`
+            : `${fmt(r.loaded, 'count')} of ${fmt(total, 'count')}`,
+        sub: `${cont.name} · ${fmt(r.loaded, 'count')} pieces loaded per container · ${fmt(total, 'count')} total order`,
+      },
+      stats,
       interpretation: interp,
       warnings,
       diagrams,
       assumptions: [
         equipmentNote(str(v.preset)),
+        'Containers required = ⌈Total Order Quantity ÷ Pieces Loaded per Container⌉. This is a planning result based on the selected equipment and deterministic packing assumptions; actual real-world loading across multiple containers may vary due to weight distribution, dunnage, bracing, and cargo securing.',
+        'Recommended capacity defines the maximum feasible pieces per container constrained by both 3D interior geometry and equipment payload limits.',
         'Layer-based 3D packing of identical rectangular pieces: each layer is a 2D floor packing; layers of different orientations can be combined. No randomness, same input gives the same result.',
         'This is the best tested arrangement, not a proof of the global optimum. Real loading needs bracing, dunnage and weight distribution.',
         EQUIPMENT_NOTE,

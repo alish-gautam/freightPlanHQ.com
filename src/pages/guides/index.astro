@@ -17,14 +17,23 @@ const categories = [
   description="Comprehensive technical guides to freight classification, container dimensions, pallet patterns, dimensional weight formulas, and international shipping rules."
   canonicalPath="guides"
 >
-  <div class="container-narrow py-6 sm:py-10">
-    <Breadcrumbs items={[{ label: 'Guides' }]} />
+  <!-- Top Breadcrumb Bar -->
+  <div class="bg-canvas border-b border-hairline px-4 sm:px-6 lg:px-8 py-2.5">
+    <div class="max-w-4xl mx-auto">
+      <Breadcrumbs items={[{ label: 'Guides' }]} />
+    </div>
+  </div>
 
-    <header class="mt-4 mb-10">
-      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+  <div class="container-narrow py-8 sm:py-12">
+    <header class="mb-10">
+      <div class="inline-flex items-center gap-1.5 bg-canvas-elevated border border-hairline rounded-full px-3 py-1 text-xs text-mute mb-3 shadow-2xs">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block animate-pulse"></span>
+        <span class="font-mono uppercase tracking-wider font-semibold">18 REFERENCE GUIDES</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink mb-3 leading-tight">
         Freight & Packaging Reference Guides
       </h1>
-      <p class="text-base text-gray-600 leading-relaxed max-w-2xl m-0">
+      <p class="text-sm sm:text-base text-body leading-relaxed max-w-2xl m-0">
         Disciplined, source-backed references explaining the mathematics, international standards, and carrier rules governing freight planning.
       </p>
     </header>
@@ -34,24 +43,30 @@ const categories = [
         const catGuides = guides.filter((g) => g.category === cat);
         if (catGuides.length === 0) return null;
         return (
-          <section class="border-t border-gray-200 pt-6">
-            <h2 class="text-lg font-bold text-gray-950 uppercase tracking-wider text-xs text-blue-600 mb-4 font-mono">
-              {cat}
-            </h2>
+          <section class="border-t border-hairline pt-6">
+            <div class="flex items-center justify-between mb-4">
+              <h2 class="text-base sm:text-lg font-bold text-ink uppercase tracking-wider font-mono flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+                {cat}
+              </h2>
+              <span class="text-xs text-mute font-mono">
+                {catGuides.length} guides
+              </span>
+            </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {catGuides.map((g) => (
                 <a
                   href={g.path}
-                  class="block p-5 border border-gray-200 rounded-lg bg-white hover:border-gray-950 transition-colors no-underline group shadow-2xs"
+                  class="block p-5 border border-hairline rounded-xl bg-canvas-elevated hover:border-ink transition-all no-underline group shadow-2xs"
                 >
-                  <div class="flex items-center justify-between text-xs text-gray-400 mb-2 font-mono">
+                  <div class="flex items-center justify-between text-xs text-mute mb-2 font-mono">
                     <span>{g.readingTime}</span>
                     <span>Verified {g.lastVerified}</span>
                   </div>
-                  <h3 class="font-bold text-base text-gray-950 group-hover:text-blue-600 mb-2 leading-snug">
-                    {g.title} →
+                  <h3 class="font-bold text-base text-ink group-hover:text-blue-600 dark:group-hover:text-blue-400 mb-2 leading-snug transition-colors">
+                    {g.title} &rarr;
                   </h3>
-                  <p class="text-xs text-gray-600 leading-relaxed m-0 line-clamp-3">
+                  <p class="text-xs text-body leading-relaxed m-0 line-clamp-3">
                     {g.summary}
                   </p>
                 </a>

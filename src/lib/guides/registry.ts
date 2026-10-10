@@ -76,7 +76,7 @@ export const guides: GuideMeta[] = [
       },
     ],
     relatedCalculators: ['freight-class-calculator', 'freight-density-calculator'],
-    relatedGuides: ['how-to-calculate-freight-class', 'nmfc-density-class-changes', 'freight-density-explained'],
+    relatedGuides: ['how-to-calculate-freight-class', 'nmfc-2025-changes', 'freight-density-explained'],
     sourceIds: ['nmfta-density-structure'],
   },
   {
@@ -114,11 +114,11 @@ export const guides: GuideMeta[] = [
     sourceIds: ['nmfta-density-structure'],
   },
   {
-    slug: 'nmfc-density-class-changes',
-    path: '/guides/nmfc-density-class-changes/',
-    title: 'NMFC Density Class Changes',
-    h1: 'NMFC Density Class Changes: Transition and Current Standard',
-    metaTitle: 'NMFC Density Class Changes — Historical 2025 Transition & Current Rules',
+    slug: 'nmfc-2025-changes',
+    path: '/guides/nmfc-2025-changes/',
+    title: 'NMFC 2025 Changes',
+    h1: 'NMFC 2025 Changes: Transition and Current Standard',
+    metaTitle: 'NMFC 2025 Changes — Historical Transition & Current Rules',
     metaDescription:
       'Understanding the NMFTA transition toward standardized density-based classification. Historical context from the 2025 reforms and the current classification landscape.',
     category: 'Freight Measurement',
@@ -253,45 +253,54 @@ export const guides: GuideMeta[] = [
     slug: 'dimensional-weight-formula',
     path: '/guides/dimensional-weight-formula/',
     title: 'Dimensional Weight Formula',
-    h1: 'Dimensional Weight Formula: Divisors, Calculations, and Rules',
-    metaTitle: 'Dimensional Weight Formula — Divisors (139, 166, 5000) Explained',
+    h1: 'Dimensional Weight Formula: Divisors, Calculations, and Carrier Rules',
+    metaTitle: 'Dimensional Weight Formula — Divisors (139, 166, 5000) & USPS Rules',
     metaDescription:
-      'Learn how the dimensional (volumetric) weight formula works across parcel and express shipping. Understand standard divisors 139, 166, and 5000.',
+      'Learn how the dimensional (volumetric) weight formula works across parcel and express shipping. Comprehensive guide to divisors 139, 166, and USPS DMM rules.',
     category: 'Packaging',
     summary:
-      'A technical explanation of the dimensional weight formula, the physical mechanics of carrier divisors, and how to verify which divisor applies to your service.',
-    readingTime: '5 min read',
-    lastVerified: '2026-10-06',
+      'A technical explanation of the dimensional weight formula, carrier divisors (139 vs 166), USPS DMM standards, and service-specific eligibility rules.',
+    readingTime: '6 min read',
+    lastVerified: '2026-10-09',
     sections: [
       {
         title: 'The Core Dimensional Weight Equation',
         content:
-          'Dimensional weight reflects the density floor expected by carriers. The formula is:\n\nDIM Weight = (Length × Width × Height) ÷ Divisor\n\nWhere the dimensions are multiplied in inches or centimeters, and divided by a carrier-specified volumetric factor (divisor).',
+          'Dimensional weight reflects the minimum density floor expected by carriers for package transportation. The fundamental equation is:\n\nDIM Weight = (Length × Width × Height) ÷ Divisor\n\nWhere package dimensions are measured in inches or centimeters, and divided by a carrier-specified volumetric factor (divisor). The resulting dimensional weight is then compared against actual scale weight: the carrier charges for whichever is greater (Billable Weight = max(Actual Weight, DIM Weight)).',
       },
       {
-        title: 'Standard Carrier Divisors',
+        title: 'Verified Carrier Divisors & Rate Categories',
         content:
-          'Divisors vary by carrier mode, region, and contractual status:',
+          'Carrier divisors depend strictly on carrier mode, service level, rate tier, and parcel geometry. They must not be applied universally across all services:',
         table: {
-          caption: 'Common Industry Dimensional Divisors',
-          head: ['Divisor', 'Unit Basis', 'Application Profile'],
+          caption: 'Verified Published Dimensional Weight Divisors',
+          head: ['Carrier / Service', 'Divisor & Unit', 'Eligibility & Conditions'],
           rows: [
-            ['139 in³/lb', 'Inches & Pounds', 'Standard US commercial parcel rates (UPS, FedEx)'],
-            ['166 in³/lb', 'Inches & Pounds', 'US retail counter rates, USPS Priority Mail, legacy contracts'],
-            ['5,000 cm³/kg', 'Centimeters & Kilograms', 'Standard international express / metric couriers (DHL, FedEx, UPS)'],
-            ['6,000 cm³/kg', 'Centimeters & Kilograms', 'Traditional IATA general air cargo planning convention'],
+            ['UPS U.S. Daily Rates', '139 in³/lb', 'Standard commercial accounts and scheduled daily pickup. Fractional dimensions rounded up to next whole inch; whole-pound weight rounding.'],
+            ['UPS U.S. Retail Rates', '166 in³/lb', 'The UPS Store and customer counter retail rates for domestic U.S. shipments. Fractional dimensions rounded up to next whole inch; whole-pound rounding.'],
+            ['FedEx Express & Ground', '139 in³/lb', 'Standard domestic U.S. commercial rates. Dimensions rounded to the nearest whole inch per FedEx packaging guidance; whole-pound weight rounding.'],
+            ['USPS Retail Priority Mail', '139 in³/lb', 'Parcels exceeding 1,728 in³ (1 cu ft) addressed to Zones 1–9. Divisor 139 applies to both rectangular (DMM 123.1.3.2) and nonrectangular parcels (with 0.785 shape factor per DMM 123.1.3.3). Dimensions rounded up to whole inches; dim weights over 70 lb billed at 70-lb price.'],
+            ['USPS Commercial Priority Mail', '139 / 166 in³/lb', 'Parcels exceeding 1,728 in³ to Zones 1–9. Rectangular parcels use 139 (dimensions round up, DMM 223.1.4.2); nonrectangular parcels use 166 with 0.785 shape factor (measurements round off to nearest whole inch, DMM 223.1.4.3). Dim weights over 70 lb billed at 70-lb price.'],
+            ['USPS Priority Mail Express', '139 in³/lb', 'Retail (DMM 113.1.3, sections 113.1.3.2 & 113.1.3.3) & Commercial (DMM 213.1.4, sections 213.1.4.2 & 213.1.4.3) parcels exceeding 1,728 in³ to Zones 1–9. Both use 139 divisor with 0.785 nonrectangular factor (dimensions round up). Initial 0.5-lb price increment; dim weights over 70 lb billed at 70-lb price.'],
+            ['DHL Express / International Courier', '5,000 cm³/kg', 'Standard international express metric courier tariffs evaluated per piece.'],
+            ['IATA Commercial Air Cargo', '6,000 cm³/kg', 'General airline air freight convention (TACT Rule 3.9.4; 1 cbm = 166.67 kg). Evaluated for total shipment.'],
           ],
         },
       },
       {
+        title: 'USPS Dimensional Weight Thresholds & Nonrectangular Rules',
+        content:
+          'The U.S. Postal Service Domestic Mail Manual (DMM 113, 123, 213, 223) specifies the exact procedure and order of operations for dimensional weight:\n\n1. Dimension Measurement: Round each exterior measurement (length, width, height at extreme points). For rectangular parcels across all services and USPS Retail nonrectangular parcels (DMM 123.1.3.2, 123.1.3.3, 113.1.3.2, 113.1.3.3, 213.1.4.2, 223.1.4.2), round each dimension up to the next whole inch. For USPS Commercial Priority Mail nonrectangular parcels (DMM 223.1.4.3), round off each measurement to the nearest whole inch (fractions 0.5 and above round up; under 0.5 round down).\n2. Volume Calculation: Calculate raw cubic volume (Length × Width × Height).\n3. Nonrectangular Adjustment: For nonrectangular or cylindrical parcels, multiply the volume by 0.785 (the exact factor specified in DMM 123.1.3.3, 223.1.4.3, 113.1.3.3, and 213.1.4.3; do not substitute π/4).\n4. Threshold Evaluation: Compare the adjusted volume to the 1 cubic foot threshold (1,728 cubic inches). If volume does not exceed 1,728 in³, dimensional weight does NOT apply; the package is rated on actual scale weight (subject to service increments, such as 0.5 lb for Express or whole pounds for Priority Mail).\n5. Divisor & Weight Rounding: If volume exceeds 1,728 in³, divide by the service divisor (139 for Retail Priority Mail per DMM 123.1.3, 139 rect / 166 nonrect for Commercial Priority Mail per DMM 223.1.4, 139 for Priority Mail Express per DMM 113.1.3 & 213.1.4) and round dimensional weight up to the next whole pound.\n6. 70-Pound Pricing Cap: Per DMM standards, if the calculated dimensional weight exceeds 70 pounds, the piece is charged the 70-pound price rather than an uncapped rate.\n7. Rating Basis: The parcel is charged based on the greater of actual weight or dimensional weight. Applicable surcharges and zone rates may also apply.',
+      },
+      {
         title: 'How Divisors Relate to Density',
         content:
-          'The divisor is inversely proportional to density. A 139 divisor represents approximately 12.4 lb/ft³ (1,728 ÷ 139 = 12.43). A 166 divisor represents approximately 10.4 lb/ft³. A smaller divisor results in a higher dimensional weight, meaning carriers charge more for lightweight packages.',
+          'A carrier divisor represents the minimum shipment density below which dimensional pricing applies:\n\n* A 139 divisor represents a density threshold of ~12.43 lb/ft³ (1,728 ÷ 139).\n* A 166 divisor represents a density threshold of ~10.41 lb/ft³ (1,728 ÷ 166).\n* A 5,000 cm³/kg metric divisor represents 200 kg/m³ (~12.49 lb/ft³).\n* A 6,000 cm³/kg metric divisor represents 166.67 kg/m³ (~10.40 lb/ft³).\n\nA smaller divisor produces a higher dimensional weight, resulting in higher shipping charges for low-density cargo.',
       },
     ],
     relatedCalculators: ['dimensional-weight-calculator', 'air-freight-chargeable-weight-calculator', 'package-girth-calculator'],
     relatedGuides: ['actual-weight-vs-dimensional-weight', 'right-size-packaging-for-dimensional-weight'],
-    sourceIds: ['parcel-dim-us', 'fedex-ups-rounding'],
+    sourceIds: ['parcel-dim-us', 'fedex-ups-rounding', 'usps-dmm-standards', 'ups-tariff-limits', 'fedex-dim-guidance'],
   },
   {
     slug: 'actual-weight-vs-dimensional-weight',
@@ -443,27 +452,32 @@ export const guides: GuideMeta[] = [
     h1: 'TI × HI Pallet Patterns: Stacking Configurations & Stability',
     metaTitle: 'TI × HI Pallet Patterns — Stacking Configurations & Layer Stability',
     metaDescription:
-      'Learn what TI and HI mean in warehousing. Discover column stacking vs interlocking patterns, overhang hazards, and how to maximize pallet stability.',
+      'Learn what TI and HI mean in warehousing. Understand column vs interlocking stacking, overhang effects, and why geometric calculations differ from structural engineering.',
     category: 'Pallet Planning',
     summary:
-      'A practical guide to pallet stacking geometry, explaining how tier count (TI) and height (HI) determine pallet load stability, warehouse density, and transit durability.',
+      'A practical guide to pallet stacking geometry, explaining how tier count (TI) and height (HI) determine pallet load spatial arrangement, with key distinctions between geometry and structural safety.',
     readingTime: '5 min read',
-    lastVerified: '2026-10-06',
+    lastVerified: '2026-10-09',
     sections: [
       {
         title: 'Understanding TI and HI',
         content:
-          'In warehouse operations, pallet stacking is defined by two numbers:\n\n* TI (Tier): The number of cartons placed on a single layer of the pallet deck.\n* HI (High): The number of layers stacked vertically.\n\nTotal Cartons = TI × HI. For example, a pallet with 8 cartons per layer stacked 5 layers high has a TI of 8 and HI of 5, holding 40 cartons.',
+          'In warehouse operations, pallet stacking is defined by two fundamental metrics:\n\n* TI (Tier): The number of cartons placed on a single layer of the pallet deck footprint.\n* HI (High): The number of layers stacked vertically within allowable height limits.\n\nTotal Cartons = TI × HI. For example, a pallet with 8 cartons per layer stacked 5 layers high has a TI of 8 and HI of 5, holding 40 cartons total.',
       },
       {
-        title: 'Column Stacking vs Interlocking Stacking',
+        title: 'Column Stacking vs Interlocking Configurations',
         content:
-          '* Column Stacking (Aligned): Cartons sit directly aligned corner-to-corner over the layer below. This preserves 100% of the corrugated carton’s compressive strength, but layers can slide independently without stretch wrap.\n* Interlocking Stacking: Cartons are pinwheeled or rotated on alternating layers like brickwork. This provides superior pallet stability, but can reduce carton compression strength by 20–40% because corners do not align over corners.',
+          '* Column Stacking (Aligned): Cartons are aligned corner-to-corner directly over the layer below. Because corrugated carton corners bear the majority (~60–70%) of vertical compressive load, column alignment maximizes structural compression resistance. However, unbanded columns have low inter-layer friction and require stretch-wrap containment to prevent layer shifting in transit.\n* Interlocking Stacking (Pinwheel / Brickwork): Cartons are rotated on alternating layers to interlock the unit load. While interlocking increases unit load cohesion, packaging literature notes that placing corners over weaker center-panel spans noticeably reduces bottom-box compression resistance compared to aligned columns.',
       },
       {
-        title: 'The Danger of Pallet Overhang',
+        title: 'Pallet Overhang and Edge Support',
         content:
-          'Allowing cartons to hang over the pallet edge by even 1 inch (25 mm) reduces corrugated stacking strength by up to 32%. Overhang also exposes packaging to punctures from adjacent pallets and warehouse racking.',
+          'Allowing cartons to overhang the perimeter of a wooden or plastic pallet deck removes direct support beneath the carton corners. In distribution environments, unsupported perimeter edges substantially degrade box stacking durability and leave cartons vulnerable to impact punctures from forklift tines and adjacent pallet loads.',
+      },
+      {
+        title: 'Geometric Pallet Calculation vs Structural Load Engineering',
+        content:
+          'Important distinction: FreightPlanHQ’s pallet calculator provides a geometric spatial optimization—calculating how many rectangular boxes fit across a 2D pallet footprint within target vertical height bounds. This geometric calculation does NOT establish that a load is structurally safe to ship.\n\nSafe pallet shipment requires evaluating corrugated flute type (B, C, or double-wall), Edge Crush Test (ECT) ratings, environmental humidity degradation, stretch-film containment tension, and dynamic transit vibration (under standards such as ASTM D4169 or ISTA 3A). Shippers should perform physical load testing or packaging engineering reviews for fragile or heavy freight.',
       },
     ],
     relatedCalculators: ['pallet-calculator', 'box-size-calculator'],
@@ -661,6 +675,50 @@ export const guides: GuideMeta[] = [
     relatedCalculators: ['box-size-calculator', 'dimensional-weight-calculator', 'box-volume-calculator'],
     relatedGuides: ['dimensional-weight-formula', 'actual-weight-vs-dimensional-weight'],
     sourceIds: ['parcel-dim-us'],
+  },
+  {
+    slug: 'ltl-linear-feet-explained',
+    path: '/guides/ltl-linear-feet-explained/',
+    title: 'LTL Linear Feet Explained',
+    h1: 'LTL Linear Feet Explained: Trailer Floor Space, Pallet Turning & Rules',
+    metaTitle: 'LTL Linear Feet Explained — Trailer Floor Space & Cubic Rules',
+    metaDescription:
+      'Learn how LTL freight carriers calculate trailer linear feet. Understand straight, turned, and pinwheeled pallet patterns, NMFC Item 110, and carrier cubic capacity rules.',
+    category: 'Containers & Trailers',
+    summary:
+      'A practical guide to Less-Than-Truckload (LTL) linear footage, showing how carriers calculate floor space used, how pallet orientation affects footage, and how to avoid linear foot surcharge penalties.',
+    readingTime: '6 min read',
+    lastVerified: '2026-10-10',
+    sections: [
+      {
+        title: 'What Are Linear Feet in LTL Freight?',
+        content:
+          'In North American Less-Than-Truckload (LTL) transportation, "linear feet" measures the lengthwise distance (in feet) a shipment occupies along the trailer floor from front to back. A standard 53-foot dry van trailer offers 53 linear feet of floor deck across an interior width of 98 to 102 inches (modeled with 96 inches / 8.0 feet of usable deck width to accommodate wall clearance and operational loading tolerances).',
+      },
+      {
+        title: 'GMA Pallet Loading Configurations & Worked Examples',
+        content:
+          'Standard North American GMA pallets measure 48 inches long by 40 inches wide. Because they are rectangular, pallet orientation directly impacts the linear footage billed by the carrier:\n\n* Straight Loading (Narrow 40" Face Across Trailer): Two pallets loaded side-by-side with 40-inch faces across occupy 80 inches of trailer width (40" + 40" = 80"). Each two-pallet row extends 48 inches along the trailer length, which equals exactly 4.00 linear feet per two-pallet row (48 in ÷ 12 in/ft = 4.00 ft). A 12-pallet shipment in straight rows occupies 6 rows × 4.00 ft = 24.0 linear feet.\n* Turned Loading (Wide 48" Face Across Trailer): Two pallets loaded side-by-side with 48-inch faces across occupy 96 inches of trailer width (48" + 48" = 96"). Each two-pallet row extends 40 inches along the trailer length, which equals 3.33 linear feet per two-pallet row (40 in ÷ 12 in/ft = 3.333 ft). A 12-pallet shipment in turned rows occupies 6 rows × 3.333 ft = 20.0 linear feet—saving 4.0 linear feet of trailer space. Note: Turned loading requires trailers with at least 98–102 inches of interior width and strict zero carton overhang, as 96 inches leaves zero clearance inside older 96-inch trailers.\n* Alternating / Pinwheeled Loading (Nested 3.67 Linear Foot Average): When trailer width or slight pallet overhang prevents side-by-side turned loading, loaders alternate pallet orientations (pinwheeling) by pairing one straight pallet with one turned pallet across each row:\n  - Width across trailer: One 40-inch face plus one 48-inch face = 88 inches (40" + 48" = 88"), leaving generous 8-to-12 inch clearance inside standard trailers.\n  - Row 1: Left pallet loaded straight (48" deep); Right pallet loaded turned (40" deep).\n  - Row 2: Left pallet loaded turned (40" deep); Right pallet loaded straight (48" deep).\n  - Left side length across the 2-row pair: 48 in + 40 in = 88 inches.\n  - Right side length across the 2-row pair: 40 in + 48 in = 88 inches.\n  - Both sides end flush at 88 inches total length.\n  - Intermediate Arithmetic: 88 inches ÷ 12 inches/ft = 7.333 linear feet for 4 pallets (two rows).\n  - Average per two-pallet row: 7.333 ft ÷ 2 = 3.667 linear feet (~3.67 linear feet per two-pallet row).\n  - Crucial Assumption & Clarification: The 3.67 linear feet figure is a mathematical average across nested, alternating row pairs. A single, isolated two-pallet pinwheeled row physically extends 48 inches (4.00 linear feet) at its furthest point until the subsequent alternating row is nested against it.',
+      },
+      {
+        title: 'NMFC Item 110 Measurement Standards and Deemed Height',
+        content:
+          'The National Motor Freight Classification (NMFC) Item 110 provides standardized definitions and rules for calculating shipment dimensions, cubic volume, and density:\n\n* Extreme Dimensions (Section 8): NMFC Item 110, Section 8 dictates that shipment dimensions must be determined using the greatest exterior dimensions (length, width, and height), including pallets, packaging, crating, banding, and any carton overhang or hardware protrusions.\n* Non-Stackable Freight & Deemed Dimensions: When freight cannot be double-stacked or top-loaded—due to fragile packaging, pyramid loading, pointed cargo, or explicit shipper "Do Not Stack" instructions—carrier rules tariffs (referencing or extending NMFC principles) routinely deem the freight to occupy the full vertical trailer height (typically 96 to 108 inches) when calculating cubic space.\n* Tariff Authority: NMFC Item 110 defines measurement methodology, but the specific capacity penalties, linear-foot surcharges, and cubic thresholds are NOT set by the NMFTA; they are published independently by each motor carrier in their individual rules tariffs.',
+      },
+      {
+        title: 'Carrier Cubic Capacity Rules & The 750 Cubic Foot Threshold',
+        content:
+          'Major North American LTL carriers enforce "Cubic Capacity and Density" rules tariffs (often published as Item 100, 390, 430, or 500 series rules) to ensure fair compensation for light, bulky freight that consumes trailer space:\n\n* Typical Industry Thresholds: A commonly cited benchmark is shipments occupying 750 cubic feet or more with an average density of less than 6.0 pounds per cubic foot (PCF). However, thresholds vary widely across carriers; some trigger at 250, 500, or 1,000 cubic feet, or link cubic volume to linear footage (e.g., 14, 15, or 20 linear feet).\n* Trailer Volume Arithmetic: In a standard dry van with ~8.17 feet usable interior width and 9.0 feet interior height (108 in ceiling), 10 linear feet of trailer space encompasses approximately 735 cubic feet of total trailer envelope (10 ft × 8.17 ft × 9.0 ft = 735.3 cu ft). If freight is non-stackable and deemed to the ceiling, 10 to 14 linear feet of floor space readily triggers 750+ cubic foot capacity thresholds.\n* Critical Limitation: There is no universal federal or statutory LTL cubic capacity rule. Each carrier tariff establishes its own cubic triggers, density floors, and penalty formulas (such as forfeiting discounted class rates and applying spot truckload rates or mandatory minimum charges per linear foot). Always inspect your carrier\'s specific rules tariff before tendering high-cube freight.',
+      },
+      {
+        title: 'Formulas for Calculating Trailer Linear Feet',
+        content:
+          'When pallets cannot be turned (due to carton overhang or forklift restrictions) or have mixed dimensions, linear feet is calculated by:\n\nLinear Feet = (Total Shipment Floor Area in sq ft) ÷ (Usable Trailer Width in feet)\n\nWhere usable trailer width is typically 8.0 feet (96 inches). For non-stackable freight that cannot have cargo placed on top, carriers charge for the entire floor footprint regardless of cargo height.',
+      },
+    ],
+    relatedCalculators: ['linear-feet-calculator', 'loading-meter-calculator', 'pallets-per-container-calculator'],
+    relatedGuides: ['standard-pallet-sizes', 'how-to-measure-freight'],
+    sourceIds: ['linear-feet-convention', 'nmfta-density-structure'],
   },
 ];
 

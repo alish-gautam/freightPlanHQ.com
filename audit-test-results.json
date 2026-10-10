@@ -1,0 +1,102 @@
+[
+  {
+    "label": "1. Homepage",
+    "requestedUrl": "https://freightplanhq.com/",
+    "actualStatus": 200,
+    "locationHeader": null,
+    "finalUrl": "https://freightplanhq.com/",
+    "finalStatus": 200,
+    "finalCanonical": "https://freightplanhq.com/",
+    "presentInSitemap": true
+  },
+  {
+    "label": "2a. Calculator (with slash)",
+    "requestedUrl": "https://freightplanhq.com/cbm-calculator/",
+    "actualStatus": 200,
+    "locationHeader": null,
+    "finalUrl": "https://freightplanhq.com/cbm-calculator/",
+    "finalStatus": 200,
+    "finalCanonical": "https://freightplanhq.com/cbm-calculator/",
+    "presentInSitemap": true
+  },
+  {
+    "label": "2b. Calculator (slashless)",
+    "requestedUrl": "https://freightplanhq.com/cbm-calculator",
+    "actualStatus": 404,
+    "locationHeader": null,
+    "finalUrl": "https://freightplanhq.com/cbm-calculator",
+    "finalStatus": 404,
+    "finalCanonical": null,
+    "presentInSitemap": false
+  },
+  {
+    "label": "3a. Guide (with slash)",
+    "requestedUrl": "https://freightplanhq.com/guides/nmfc-2025-changes/",
+    "actualStatus": 200,
+    "locationHeader": null,
+    "finalUrl": "https://freightplanhq.com/guides/nmfc-2025-changes/",
+    "finalStatus": 200,
+    "finalCanonical": "https://freightplanhq.com/guides/nmfc-2025-changes/",
+    "presentInSitemap": true
+  },
+  {
+    "label": "3b. Guide (slashless)",
+    "requestedUrl": "https://freightplanhq.com/guides/nmfc-2025-changes",
+    "actualStatus": 404,
+    "locationHeader": null,
+    "finalUrl": "https://freightplanhq.com/guides/nmfc-2025-changes",
+    "finalStatus": 404,
+    "finalCanonical": null,
+    "presentInSitemap": false
+  },
+  {
+    "label": "4a. Legacy NMFC URL (with slash)",
+    "requestedUrl": "https://freightplanhq.com/guides/nmfc-density-class-changes/",
+    "actualStatus": 200,
+    "locationHeader": null,
+    "finalUrl": "https://freightplanhq.com/guides/nmfc-density-class-changes/",
+    "finalStatus": 200,
+    "finalCanonical": "https://freightplanhq.com/guides/nmfc-2025-changes/",
+    "presentInSitemap": false
+  },
+  {
+    "label": "4b. Legacy NMFC URL (slashless)",
+    "requestedUrl": "https://freightplanhq.com/guides/nmfc-density-class-changes",
+    "actualStatus": 404,
+    "locationHeader": null,
+    "finalUrl": "https://freightplanhq.com/guides/nmfc-density-class-changes",
+    "finalStatus": 404,
+    "finalCanonical": null,
+    "presentInSitemap": false
+  },
+  {
+    "label": "5a. Nonexistent URL (slashless)",
+    "requestedUrl": "https://freightplanhq.com/definitely-nonexistent-route",
+    "actualStatus": 404,
+    "locationHeader": null,
+    "finalUrl": "https://freightplanhq.com/definitely-nonexistent-route",
+    "finalStatus": 404,
+    "finalCanonical": null,
+    "presentInSitemap": false
+  },
+  {
+    "label": "5b. Nonexistent URL (with slash)",
+    "requestedUrl": "https://freightplanhq.com/definitely-nonexistent-route/",
+    "actualStatus": 404,
+    "locationHeader": null,
+    "finalUrl": "https://freightplanhq.com/definitely-nonexistent-route/",
+    "finalStatus": 404,
+    "finalCanonical": null,
+    "presentInSitemap": false
+  },
+  {
+    "label": "6. Static asset (favicon.svg)",
+    "requestedUrl": "https://freightplanhq.com/favicon.svg",
+    "actualStatus": 200,
+    "locationHeader": null,
+    "finalUrl": "https://freightplanhq.com/favicon.svg",
+    "finalStatus": 200,
+    "finalCanonical": null,
+    "presentInSitemap": false
+  }
+]

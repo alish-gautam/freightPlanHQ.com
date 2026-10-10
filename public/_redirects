@@ -1,0 +1,52 @@
+# FreightPlanHQ — Host & CDN Redirect Rules
+# Generated from project route inventory to enforce canonical trailing slashes (HTTP 301)
+# and provide edge-level permanent redirection for legacy URLs.
+
+# 1. Legacy Route Redirections (NMFC guide slug change)
+/guides/nmfc-density-class-changes /guides/nmfc-2025-changes/ 301
+/guides/nmfc-density-class-changes/ /guides/nmfc-2025-changes/ 301
+
+# 2. Canonical Trailing-Slash Enforcements for Genuine Routes
+# Maps each known slashless URL to its canonical trailing-slash URL.
+# Note: Nonexistent routes are omitted so the host returns a true HTTP 404.
+/about /about/ 301
+/air-freight-chargeable-weight-calculator /air-freight-chargeable-weight-calculator/ 301
+/box-size-calculator /box-size-calculator/ 301
+/box-volume-calculator /box-volume-calculator/ 301
+/cbm-calculator /cbm-calculator/ 301
+/contact /contact/ 301
+/container-loading-calculator /container-loading-calculator/ 301
+/dimensional-weight-calculator /dimensional-weight-calculator/ 301
+/disclaimer /disclaimer/ 301
+/freight-class-calculator /freight-class-calculator/ 301
+/freight-density-calculator /freight-density-calculator/ 301
+/guides /guides/ 301
+/guides/20ft-container-dimensions /guides/20ft-container-dimensions/ 301
+/guides/40ft-container-dimensions /guides/40ft-container-dimensions/ 301
+/guides/40ft-high-cube-container-dimensions /guides/40ft-high-cube-container-dimensions/ 301
+/guides/actual-weight-vs-dimensional-weight /guides/actual-weight-vs-dimensional-weight/ 301
+/guides/air-freight-chargeable-weight /guides/air-freight-chargeable-weight/ 301
+/guides/dimensional-weight-formula /guides/dimensional-weight-formula/ 301
+/guides/freight-class-chart /guides/freight-class-chart/ 301
+/guides/freight-density-explained /guides/freight-density-explained/ 301
+/guides/how-to-calculate-cbm /guides/how-to-calculate-cbm/ 301
+/guides/how-to-calculate-freight-class /guides/how-to-calculate-freight-class/ 301
+/guides/how-to-measure-freight /guides/how-to-measure-freight/ 301
+/guides/lcl-weight-or-measure /guides/lcl-weight-or-measure/ 301
+/guides/ltl-linear-feet-explained /guides/ltl-linear-feet-explained/ 301
+/guides/nmfc-2025-changes /guides/nmfc-2025-changes/ 301
+/guides/right-size-packaging-for-dimensional-weight /guides/right-size-packaging-for-dimensional-weight/ 301
+/guides/shipping-container-dimensions /guides/shipping-container-dimensions/ 301
+/guides/standard-pallet-sizes /guides/standard-pallet-sizes/ 301
+/guides/ti-hi-pallet-patterns /guides/ti-hi-pallet-patterns/ 301
+/guides/what-is-cbm /guides/what-is-cbm/ 301
+/lcl-freight-calculator /lcl-freight-calculator/ 301
+/linear-feet-calculator /linear-feet-calculator/ 301
+/loading-meter-calculator /loading-meter-calculator/ 301
+/methodology /methodology/ 301
+/package-girth-calculator /package-girth-calculator/ 301
+/pallet-calculator /pallet-calculator/ 301
+/pallets-per-container-calculator /pallets-per-container-calculator/ 301
+/privacy /privacy/ 301
+/sources /sources/ 301
+/terms /terms/ 301

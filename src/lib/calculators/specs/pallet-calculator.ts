@@ -162,6 +162,7 @@ const spec: CalculatorSpec = {
         'Rectangular, identical cartons; every layer is packed flat on the one below.',
         `Objective: satisfy all limits, then maximise cartons per pallet, then footprint use. Search covers guillotine-cut arrangements of the allowed orientations, so this is the best tested arrangement, not a proof of the global optimum.`,
         'Dimensions are rounded to the nearest millimetre for packing.',
+        'Geometric spatial layout estimate only. Does not evaluate corrugated carton compression strength (ECT/BCT), pallet overhang safety, or transit dynamic stability. Physical testing or engineering review is required for shipping safety verification.',
         'Actual loading may require clearance, securing, stacking, and handling allowances.',
       ],
       links: [

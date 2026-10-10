@@ -32,6 +32,8 @@ export type ContainerLimit = 'quantity' | 'payload' | 'door opening' | 'orientat
 export interface ContainerResult {
   loaded: number;
   remaining: number;
+  containersRequired: number | null;
+  recommendedCapacity: number;
   placements: Placement3D[];
   layers: LayerInfo[];
   usable: { l: number; w: number; h: number };
@@ -58,6 +60,8 @@ export function loadContainer(i: ContainerInput): ContainerResult {
   const empty = (msg: string): ContainerResult => ({
     loaded: 0,
     remaining: i.cargo.quantity,
+    containersRequired: null,
+    recommendedCapacity: 0,
     placements: [],
     layers: [],
     usable,
@@ -128,9 +132,13 @@ export function loadContainer(i: ContainerInput): ContainerResult {
   const usableVolumeMm3 = usable.l * usable.w * usable.h;
   const weightKg = drawn.count * i.cargo.weightKg;
   const usedLength = drawn.placements.reduce((m, p) => Math.max(m, p.x + p.l), 0);
+  const recommendedCapacity = payloadCap !== null ? Math.min(geo.capacity, payloadCap) : geo.capacity;
+  const containersRequired = drawn.count > 0 ? Math.ceil(i.cargo.quantity / drawn.count) : null;
   return {
     loaded: drawn.count,
     remaining: i.cargo.quantity - drawn.count,
+    containersRequired,
+    recommendedCapacity,
     placements: drawn.placements,
     layers: drawn.layers,
     usable,

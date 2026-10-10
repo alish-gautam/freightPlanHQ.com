@@ -3,12 +3,21 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
+import { site } from './src/lib/site';
+
 // https://astro.build/config
 export default defineConfig({
-  // Temporary domain; keep in sync with src/lib/site.ts
-  site: 'https://freightplanhq.com',
+  // Configurable production domain derived from single source of truth
+  site: site.url,
   trailingSlash: 'always',
   build: { format: 'directory' },
-  integrations: [sitemap()],
+  redirects: {
+    '/guides/nmfc-density-class-changes/': '/guides/nmfc-2025-changes/',
+  },
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes('/guides/nmfc-density-class-changes/'),
+    }),
+  ],
   vite: { plugins: [tailwindcss()] },
 });

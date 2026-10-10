@@ -289,6 +289,28 @@ describe('loadContainer', () => {
     expect(r.loaded).toBe(50);
     expect(r.remaining).toBe(0);
     expect(r.limit).toBe('quantity');
+    expect(r.containersRequired).toBe(1);
+    expect(r.recommendedCapacity).toBeGreaterThan(50);
+    expect(r.geometricCapacity).toBeGreaterThan(50);
+  });
+  it('calculates containers required and recommended capacity consistently', () => {
+    // Piece: 1170 × 580 × 590 mm in C20 (5896 × 2350 × 2393 mm).
+    // Floor: floor(5896/1170)=5 * floor(2350/580)=4 = 20.
+    // Layers: floor(2393/590)=4 layers -> 80 pieces.
+    // Order of 170 pieces -> loads 80 in first container, 90 remaining, 3 containers required.
+    const r = loadContainer(
+      cbase({
+        cargo: { l: 1170, w: 580, h: 590, weightKg: 10, quantity: 170, packageType: 'carton' },
+        upright: true,
+        rotateFloor: false,
+      }) as never,
+    );
+    expect(r.geometricCapacity).toBe(80);
+    expect(r.recommendedCapacity).toBe(80);
+    expect(r.loaded).toBe(80);
+    expect(r.remaining).toBe(90);
+    expect(r.containersRequired).toBe(3);
+    expect(r.containersRequired).toBe(Math.ceil(170 / r.loaded));
   });
   it('upright-only never exceeds free orientation', () => {
     const up = loadContainer(cbase({ upright: true }) as never);

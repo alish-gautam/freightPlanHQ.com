@@ -9,58 +9,60 @@ import { BRAND_NAME } from '../../lib/site';
   description={`Privacy Policy for ${BRAND_NAME}. Pure client-side calculations with no storage or monetization of proprietary cargo data.`}
   canonicalPath="privacy"
 >
-  <div class="container-narrow py-6 sm:py-10">
-    <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
+  <!-- Top Breadcrumb Bar -->
+  <div class="bg-canvas border-b border-hairline px-4 sm:px-6 lg:px-8 py-2.5">
+    <div class="max-w-4xl mx-auto">
+      <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
+    </div>
+  </div>
 
-    <header class="mt-4 mb-8">
-      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+  <div class="container-narrow py-8 sm:py-12">
+    <header class="mb-8">
+      <div class="inline-flex items-center gap-1.5 bg-canvas-elevated border border-hairline rounded-full px-3 py-1 text-xs text-mute mb-3 shadow-2xs">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block animate-pulse"></span>
+        <span class="font-mono uppercase tracking-wider font-semibold">DATA INTEGRITY</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink mb-3 leading-tight">
         Privacy Policy
       </h1>
-      <p class="text-base text-gray-600 leading-relaxed max-w-2xl m-0">
+      <p class="text-sm sm:text-base text-body leading-relaxed max-w-2xl m-0">
         We respect your proprietary cargo data and adhere to a strict client-side architecture.
       </p>
     </header>
 
-    <div class="prose max-w-none space-y-6 text-sm text-gray-700 leading-relaxed">
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-lg font-bold text-gray-950 mb-2">1. Client-Side Cargo Calculations</h2>
+    <div class="space-y-8 text-sm text-body leading-relaxed">
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">1. Client-Side Cargo Calculations</h2>
         <p>
           All calculation inputs (dimensions, weights, carton quantities, pallet specifications, and freight values) are processed directly within your web browser using client-side JavaScript. We do not transmit, log, store, or analyze your cargo data on our servers. Your commercial shipment data never leaves your device.
         </p>
       </section>
 
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-lg font-bold text-gray-950 mb-2">2. Zero Tracking Cookies & Local Storage</h2>
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">2. Zero Tracking Cookies & Theme Preference Storage</h2>
         <p>
-          {BRAND_NAME} sets no tracking cookies, marketing cookies, or session cookies. We do not utilize browser <code>localStorage</code> or <code>sessionStorage</code> to store user profiles, device identifiers, or tracking fingerprints.
+          {BRAND_NAME} sets no tracking cookies, marketing cookies, or session cookies. Browser <code>localStorage</code> is used solely to remember your chosen theme preference (light or dark mode) across browser visits. No user identifiers or tracking fingerprints are ever stored.
         </p>
       </section>
 
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-lg font-bold text-gray-950 mb-2">3. Third-Party Scripts, Fonts & External APIs</h2>
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">3. Third-Party Scripts, Fonts & External APIs</h2>
         <p>
-          We do not embed third-party analytics trackers (such as Google Analytics or Meta Pixel), third-party advertising scripts, or external telemetry libraries. All styles and scripts are bundled and served directly from our static host. Typography is rendered using your operating system's native system font stack; no external font CDNs (such as Google Fonts or Adobe Fonts) are contacted.
+          We do not embed third-party analytics trackers, third-party advertising scripts, or external telemetry libraries. All styles and scripts are bundled and served directly from our static host. Typography is rendered using your operating system's native system font stack; no external font CDNs are contacted.
         </p>
       </section>
 
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-lg font-bold text-gray-950 mb-2">4. Hosting Infrastructure Access Logs</h2>
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">4. Hosting Infrastructure Access Logs</h2>
         <p>
           Like all web servers, standard access logs (consisting of the requesting device's IP address, browser user-agent, referring URL, and request timestamp) are temporarily processed by our static web hosting infrastructure. These server logs are maintained strictly for network transmission integrity, DDoS mitigation, and infrastructure security.
         </p>
       </section>
 
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-lg font-bold text-gray-950 mb-2">5. No User Accounts or Personal Information</h2>
+      <section class="border-t border-hairline pt-6">
+        <h2 class="text-xl font-bold text-ink mb-2">5. No User Accounts or Personal Information</h2>
         <p>
           {BRAND_NAME} does not require registration, login, or user profiles. We do not collect names, company affiliations, physical shipping addresses, or payment card details.
-        </p>
-      </section>
-
-      <section class="border-t border-gray-200 pt-6">
-        <h2 class="text-lg font-bold text-gray-950 mb-2">6. Contact Information</h2>
-        <p>
-          For privacy inquiries or technical questions regarding this website, refer to our <a href="/contact/" class="text-blue-600 hover:underline">Contact</a> page.
         </p>
       </section>
     </div>

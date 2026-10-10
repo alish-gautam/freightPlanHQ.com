@@ -77,68 +77,124 @@ const resolvedSources = calc.sourceIds
   canonicalPath={calc.slug}
   schema={fullSchema}
 >
-  <div class="container-narrow py-6 sm:py-10">
-    <!-- Breadcrumb -->
-    <Breadcrumbs
-      items={[
-        { label: calc.category, href: `/#category-${calc.category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}` },
-        { label: calc.title },
-      ]}
-    />
+  <!-- Top Breadcrumb Bar -->
+  <div class="bg-canvas border-b border-hairline px-4 sm:px-6 lg:px-8 py-2.5">
+    <div class="max-w-7xl mx-auto">
+      <Breadcrumbs
+        items={[
+          { label: calc.category, href: `/#category-${calc.category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}` },
+          { label: calc.title },
+        ]}
+      />
+    </div>
+  </div>
 
-    <!-- Header Block -->
-    <header class="mt-4 mb-6">
-      <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-gray-100 border border-gray-200 text-xs font-mono text-gray-700 uppercase tracking-wider mb-3">
-        <span>{calc.category}</span>
-        {calc.flagship && <span class="bg-blue-600 text-white px-1.5 py-0.2 rounded font-semibold text-[10px]">Flagship</span>}
+  <!-- Intro & Title Header Block -->
+  <section class="bg-canvas py-8 sm:py-10 border-b border-hairline" id="calc-intro">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center gap-2 mb-3">
+        <div class="inline-flex items-center gap-1.5 bg-canvas-elevated border border-hairline rounded-full px-3 py-1 text-xs text-mute shadow-2xs">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-500 inline-block animate-pulse"></span>
+          <span>Free Logistics Planning Tool</span>
+        </div>
+        <div class="inline-flex items-center gap-1.5 bg-canvas-elevated border border-hairline rounded-full px-3 py-1 text-xs text-mute shadow-2xs">
+          <span class="font-medium text-ink">Category:</span>
+          <span class="text-blue-600 dark:text-blue-400 font-semibold uppercase">{calc.category}</span>
+        </div>
+        {calc.flagship && (
+          <span class="bg-blue-600 text-white px-2 py-0.5 rounded-full font-bold text-[10px] uppercase tracking-wider">
+            Flagship
+          </span>
+        )}
       </div>
-      <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-gray-950 mb-3">
+
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-ink mb-3 tracking-tight leading-tight">
         {calc.h1}
       </h1>
-      <p class="text-base text-gray-600 leading-relaxed max-w-3xl m-0">
+      <p class="text-sm sm:text-base text-body max-w-3xl leading-relaxed m-0 mb-4">
         {calc.shortDesc}
       </p>
-    </header>
 
-    <!-- Calculator Shell (Placed EARLY per Section 39) -->
+      <!-- Trust Strip -->
+      <div class="flex flex-wrap items-center gap-4 text-xs text-mute pt-3 border-t border-hairline">
+        <span class="flex items-center gap-1.5 font-medium text-ink">
+          <svg class="w-3.5 h-3.5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Instant calculation
+        </span>
+        <span class="w-1 h-1 rounded-full bg-hairline-strong"></span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Auditable formulas
+        </span>
+        <span class="w-1 h-1 rounded-full bg-hairline-strong"></span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-3.5 h-3.5 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Zero sign-up
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Calculator Surface (High on page) -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
     <CalculatorShell slug={calc.slug} spec={calc.spec} />
 
     <!-- Technical Contextual Disclaimer -->
-    <div class="border-l-4 border-amber-500 bg-amber-50 p-4 rounded-r-md text-xs text-amber-900 leading-relaxed my-8" role="note">
-      <p class="font-semibold uppercase tracking-wider text-[11px] text-amber-800 m-0 mb-1">
-        Planning Notice & Disclaimer
-      </p>
-      <p class="m-0">
-        {calc.disclaimer}
-      </p>
+    <div class="border border-hairline bg-surface-subtle p-4 sm:p-5 rounded-xl text-xs text-body leading-relaxed my-8 flex items-start gap-3" role="note">
+      <div class="w-5 h-5 rounded-full bg-amber-500/15 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 mt-0.5">
+        <svg class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+      </div>
+      <div>
+        <p class="font-bold uppercase tracking-wider text-[11px] text-ink m-0 mb-1">
+          Planning Notice & Scope Boundary
+        </p>
+        <p class="m-0 text-mute">
+          {calc.disclaimer}
+        </p>
+      </div>
     </div>
 
     <!-- Formula & Methodology -->
-    <section class="mt-12 pt-8 border-t border-gray-200">
-      <h2 class="text-xl font-bold text-gray-950 tracking-tight mb-3">
-        Formula & Calculation Methodology
-      </h2>
-      <p class="text-sm text-gray-700 leading-relaxed mb-4">
+    <section class="mt-12 pt-8 border-t border-hairline">
+      <div class="mb-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-1">
+          Auditable Mathematics
+        </span>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink tracking-tight m-0">
+          Formula & Calculation Methodology
+        </h2>
+      </div>
+      <p class="text-xs sm:text-sm text-body leading-relaxed mb-4">
         {calc.formula.summary}
       </p>
 
-      <div class="bg-gray-900 text-gray-100 rounded-lg p-4 font-mono text-sm overflow-x-auto my-4 shadow-xs">
+      <div class="bg-surface-subtle border border-hairline rounded-xl p-4 sm:p-5 font-mono text-xs sm:text-sm text-ink overflow-x-auto my-4 shadow-2xs">
         <code>{calc.formula.latexOrCode}</code>
       </div>
 
-      <div class="table-scroll">
+      <div class="table-scroll my-4">
         <table class="data-table">
-          <caption>Variable Definitions</caption>
+          <caption>Variable Definitions & Unit Basis</caption>
           <thead>
             <tr>
-              <th scope="col">Variable</th>
-              <th scope="col">Definition & Unit Basis</th>
+              <th scope="col" class="w-1/4">Variable</th>
+              <th scope="col">Definition & Basis</th>
             </tr>
           </thead>
           <tbody>
             {calc.formula.variables.map((v) => (
               <tr>
-                <th scope="row" class="font-mono">{v.symbol}</th>
+                <th scope="row" class="font-mono font-bold text-ink">{v.symbol}</th>
                 <td>{v.explanation}</td>
               </tr>
             ))}
@@ -147,71 +203,89 @@ const resolvedSources = calc.sourceIds
       </div>
     </section>
 
-    <!-- Worked Example (Reproducible arithmetic matching engine) -->
-    <section class="mt-12 pt-8 border-t border-gray-200">
-      <h2 class="text-xl font-bold text-gray-950 tracking-tight mb-3">
-        Worked Example: {calc.workedExample.title}
-      </h2>
-      <p class="text-sm text-gray-700 leading-relaxed mb-4">
+    <!-- Engine Audit Trail (Worked Example) -->
+    <section class="mt-12 pt-8 border-t border-hairline">
+      <div class="mb-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-1">
+          Engine Audit Trail
+        </span>
+        <h2 class="text-xl sm:text-2xl font-bold text-ink tracking-tight m-0">
+          Worked Example: {calc.workedExample.title}
+        </h2>
+      </div>
+      <p class="text-xs sm:text-sm text-body leading-relaxed mb-4">
         {calc.workedExample.scenario}
       </p>
 
-      <div class="bg-white border border-gray-200 rounded-lg p-5 mb-4 shadow-xs">
-        <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">
-          Example Inputs
+      <div class="bg-canvas-elevated border border-hairline rounded-xl p-5 sm:p-6 mb-4 shadow-xs">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-mute mb-3 font-mono">
+          Input Parameters
         </h3>
-        <ul class="grid grid-cols-1 sm:grid-cols-3 gap-2 list-none p-0 m-0 text-xs">
+        <ul class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 list-none p-0 m-0 text-xs mb-6">
           {calc.workedExample.inputs.map((inp) => (
-            <li class="bg-gray-50 p-2.5 rounded border border-gray-100">
-              <span class="block text-gray-500 text-[11px]">{inp.label}</span>
-              <span class="font-semibold text-gray-900">{inp.value}</span>
+            <li class="bg-surface-subtle p-3 rounded-lg border border-hairline">
+              <span class="block text-mute text-[11px] mb-0.5">{inp.label}</span>
+              <span class="font-bold text-ink">{inp.value}</span>
             </li>
           ))}
         </ul>
 
-        <h3 class="text-xs font-semibold uppercase tracking-wider text-gray-500 mt-5 mb-2">
-          Step-by-Step Calculation
+        <h3 class="text-xs font-bold uppercase tracking-wider text-mute mb-3 font-mono">
+          Step-by-Step Calculation Breakdown
         </h3>
-        <ol class="space-y-1.5 text-xs text-gray-700 pl-4 m-0">
-          {calc.workedExample.steps.map((st) => (
-            <li>{st}</li>
+        <ol class="space-y-2 text-xs text-body pl-0 list-none m-0 mb-6">
+          {calc.workedExample.steps.map((st, idx) => (
+            <li class="flex items-start gap-2.5 p-2.5 rounded-lg bg-surface-subtle border border-hairline">
+              <span class="w-5 h-5 rounded-full bg-blue-500/15 text-blue-700 dark:text-blue-400 text-[10px] font-mono font-bold flex items-center justify-center shrink-0 mt-0.5">
+                {idx + 1}
+              </span>
+              <span class="leading-relaxed">{st}</span>
+            </li>
           ))}
         </ol>
 
-        <div class="mt-5 p-3.5 bg-blue-50 border border-blue-200 rounded-md">
-          <p class="text-[11px] font-semibold uppercase tracking-wider text-blue-700 m-0 mb-0.5">
-            Verified Result: {calc.workedExample.result.label}
-          </p>
-          <p class="text-lg font-bold text-blue-950 m-0">
-            {calc.workedExample.result.value}
-          </p>
+        <div class="p-4 bg-surface-subtle border border-hairline rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-accent block mb-0.5">
+              Verified Engine Result: {calc.workedExample.result.label}
+            </span>
+            <span class="text-xl sm:text-2xl font-extrabold text-ink">
+              {calc.workedExample.result.value}
+            </span>
+          </div>
           {calc.workedExample.result.note && (
-            <p class="text-xs text-blue-800 m-0 mt-1">
+            <span class="text-xs text-mute sm:text-right max-w-xs">
               {calc.workedExample.result.note}
-            </p>
+            </span>
           )}
         </div>
       </div>
     </section>
 
-    <!-- Assumptions & Important Limitations -->
-    <section class="mt-12 pt-8 border-t border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-8">
-      <div>
-        <h2 class="text-lg font-bold text-gray-950 tracking-tight mb-3">
-          Assumptions Used
-        </h2>
-        <ul class="space-y-2 text-xs text-gray-700 pl-4 m-0">
+    <!-- Assumptions & Limitations -->
+    <section class="mt-12 pt-8 border-t border-hairline grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-canvas-elevated border border-hairline rounded-xl p-5 sm:p-6 shadow-xs">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+          <h2 class="text-base font-bold text-ink m-0">
+            Assumptions Used
+          </h2>
+        </div>
+        <ul class="space-y-2 text-xs text-body pl-4 m-0 leading-relaxed list-disc">
           {calc.assumptions.map((item) => (
             <li>{item}</li>
           ))}
         </ul>
       </div>
 
-      <div>
-        <h2 class="text-lg font-bold text-gray-950 tracking-tight mb-3">
-          Important Limitations
-        </h2>
-        <ul class="space-y-2 text-xs text-gray-700 pl-4 m-0">
+      <div class="bg-canvas-elevated border border-hairline rounded-xl p-5 sm:p-6 shadow-xs">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+          <h2 class="text-base font-bold text-ink m-0">
+            Important Limitations
+          </h2>
+        </div>
+        <ul class="space-y-2 text-xs text-body pl-4 m-0 leading-relaxed list-disc">
           {calc.limitations.map((item) => (
             <li>{item}</li>
           ))}
@@ -221,23 +295,30 @@ const resolvedSources = calc.sourceIds
 
     <!-- Authoritative Sources -->
     {resolvedSources.length > 0 && (
-      <section class="mt-12 pt-8 border-t border-gray-200">
-        <h2 class="text-lg font-bold text-gray-950 tracking-tight mb-3">
-          Authoritative Standards & Sources
-        </h2>
-        <div class="space-y-3">
+      <section class="mt-12 pt-8 border-t border-hairline">
+        <div class="mb-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-1">
+            Primary Documentation
+          </span>
+          <h2 class="text-xl sm:text-2xl font-bold text-ink tracking-tight m-0">
+            Authoritative Standards & Sources
+          </h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {resolvedSources.map((s) => (
-            <div class="border border-gray-200 rounded-lg p-4 bg-white text-xs">
-              <div class="flex items-center justify-between mb-1">
-                <span class="font-semibold text-gray-900">{s!.organization}</span>
-                <span class="text-gray-400 font-mono text-[11px]">Verified: {s!.verified}</span>
+            <div class="border border-hairline rounded-xl p-4 sm:p-5 bg-canvas-elevated text-xs shadow-xs">
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="font-bold text-ink">{s!.organization}</span>
+                <span class="text-mute font-mono text-[10px] bg-surface-subtle px-2 py-0.5 rounded border border-hairline">
+                  Verified: {s!.verified}
+                </span>
               </div>
-              <p class="text-gray-700 font-medium mb-1">
-                <a href={s!.url} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">
+              <p class="font-semibold mb-1.5">
+                <a href={s!.url} target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">
                   {s!.title} ↗
                 </a>
               </p>
-              <p class="text-gray-500 m-0 text-[11px]">
+              <p class="text-mute m-0 text-[11px] leading-relaxed">
                 {s!.notes}
               </p>
             </div>
@@ -248,18 +329,27 @@ const resolvedSources = calc.sourceIds
 
     <!-- Frequently Asked Questions -->
     {calc.faqs.length > 0 && (
-      <section class="mt-12 pt-8 border-t border-gray-200">
-        <h2 class="text-xl font-bold text-gray-950 tracking-tight mb-4">
-          Frequently Asked Questions
-        </h2>
+      <section class="mt-12 pt-8 border-t border-hairline">
+        <div class="mb-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-1">
+            Questions & Answers
+          </span>
+          <h2 class="text-xl sm:text-2xl font-bold text-ink tracking-tight m-0">
+            Frequently Asked Questions
+          </h2>
+        </div>
         <div class="space-y-3">
           {calc.faqs.map((faq) => (
-            <details class="border border-gray-200 rounded-lg bg-white p-4 group">
-              <summary class="font-semibold text-sm text-gray-900 cursor-pointer list-none flex items-center justify-between">
+            <details class="group border border-hairline rounded-xl bg-canvas-elevated p-4 sm:p-5 shadow-2xs hover:border-hairline-strong transition-all">
+              <summary class="font-bold text-sm text-ink cursor-pointer list-none flex items-center justify-between gap-4 select-none">
                 <span>{faq.question}</span>
-                <span class="text-gray-400 group-open:rotate-180 transition-transform">▼</span>
+                <span class="text-mute group-open:rotate-180 transition-transform duration-200 shrink-0">
+                  <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
               </summary>
-              <p class="mt-3 text-xs text-gray-700 leading-relaxed border-t border-gray-100 pt-3 m-0">
+              <p class="mt-3 text-xs sm:text-sm text-body leading-relaxed border-t border-hairline pt-3 m-0">
                 {faq.answer}
               </p>
             </details>
@@ -270,26 +360,31 @@ const resolvedSources = calc.sourceIds
 
     <!-- Next Calculation Steps / Related Calculators -->
     {relatedCalcs.length > 0 && (
-      <section class="mt-12 pt-8 border-t border-gray-200">
-        <h2 class="text-xl font-bold text-gray-950 tracking-tight mb-2">
-          What to Calculate Next
-        </h2>
-        <p class="text-xs text-gray-500 mb-4">
-          Freight planning connects sequentially from package dimensions to freight class, pallets, and full containers:
+      <section class="mt-12 pt-8 border-t border-hairline">
+        <div class="mb-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-1">
+            Sequential Planning Flow
+          </span>
+          <h2 class="text-xl sm:text-2xl font-bold text-ink tracking-tight m-0">
+            What to Calculate Next
+          </h2>
+        </div>
+        <p class="text-xs text-mute mb-4">
+          Freight planning connects sequentially from package dimensions to freight class, pallets, and full equipment:
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {relatedCalcs.map((rc) => (
             <a
               href={rc.path}
-              class="block p-4 border border-gray-200 rounded-lg bg-white hover:border-gray-950 transition-colors no-underline group shadow-2xs"
+              class="block p-5 border border-hairline rounded-xl bg-canvas-elevated hover:border-ink transition-all no-underline group shadow-2xs"
             >
-              <span class="text-[10px] font-mono uppercase tracking-wider text-gray-400 block mb-1">
+              <span class="text-[10px] font-mono uppercase tracking-wider text-mute block mb-1">
                 {rc.category}
               </span>
-              <span class="font-semibold text-sm text-gray-900 group-hover:text-blue-600 block mb-1">
+              <span class="font-bold text-sm text-ink group-hover:text-blue-600 dark:group-hover:text-blue-400 block mb-1 transition-colors">
                 {rc.title} →
               </span>
-              <span class="text-xs text-gray-500 line-clamp-2 leading-snug">
+              <span class="text-xs text-mute line-clamp-2 leading-relaxed">
                 {rc.shortDesc}
               </span>
             </a>
@@ -300,24 +395,29 @@ const resolvedSources = calc.sourceIds
 
     <!-- Related Reference Guides -->
     {relatedGuides.length > 0 && (
-      <section class="mt-12 pt-8 border-t border-gray-200 mb-12">
-        <h2 class="text-xl font-bold text-gray-950 tracking-tight mb-2">
-          Related Reference Guides
-        </h2>
+      <section class="mt-12 pt-8 border-t border-hairline mb-12">
+        <div class="mb-4">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-600 dark:text-blue-400 block mb-1">
+            Knowledge Base
+          </span>
+          <h2 class="text-xl sm:text-2xl font-bold text-ink tracking-tight m-0">
+            Related Reference Guides
+          </h2>
+        </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {relatedGuides.map((rg) => (
             <a
               href={rg.path}
-              class="block p-4 border border-gray-200 rounded-lg bg-white hover:border-blue-600 transition-colors no-underline group shadow-2xs"
+              class="block p-5 border border-hairline rounded-xl bg-canvas-elevated hover:border-ink transition-all no-underline group shadow-2xs"
             >
-              <div class="flex items-center justify-between text-[11px] text-gray-400 mb-1 font-mono">
+              <div class="flex items-center justify-between text-[11px] text-mute mb-1.5 font-mono">
                 <span>{rg.category}</span>
                 <span>{rg.readingTime}</span>
               </div>
-              <span class="font-semibold text-sm text-gray-900 group-hover:text-blue-600 block mb-1">
+              <span class="font-bold text-sm text-ink group-hover:text-blue-600 dark:group-hover:text-blue-400 block mb-1 transition-colors">
                 {rg.title} →
               </span>
-              <span class="text-xs text-gray-500 line-clamp-2 leading-snug">
+              <span class="text-xs text-mute line-clamp-2 leading-relaxed">
                 {rg.summary}
               </span>
             </a>

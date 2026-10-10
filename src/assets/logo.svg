@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!-- FreightPlanHQ Brand Icon Mark -->
+  <polygon points="16,4 27.5,9.8 16,15.5 4.5,9.8" fill="#38bdf8"/>
+  <line x1="16" y1="4" x2="16" y2="15.5" stroke="#0f172a" stroke-width="1.2"/>
+  <line x1="10.25" y1="6.9" x2="21.75" y2="12.65" stroke="#0f172a" stroke-width="1.2"/>
+
+  <polygon points="4.5,11.2 14.5,16.5 14.5,27.5 4.5,22.2" fill="#1d4ed8"/>
+  <line x1="8" y1="13.1" x2="8" y2="24.1" stroke="#0f172a" stroke-width="1"/>
+  <line x1="11.5" y1="14.9" x2="11.5" y2="25.9" stroke="#0f172a" stroke-width="1"/>
+
+  <polygon points="17.5,16.5 27.5,11.2 27.5,22.2 17.5,27.5" fill="#2563eb"/>
+  <line x1="20.8" y1="14.8" x2="20.8" y2="25.8" stroke="#0f172a" stroke-width="1"/>
+  <line x1="24.2" y1="13" x2="24.2" y2="24" stroke="#0f172a" stroke-width="1"/>
+  <rect x="19.5" y="17.5" width="4.5" height="3" rx="0.75" fill="#f59e0b" stroke="#0f172a" stroke-width="0.75"/>
+</svg>

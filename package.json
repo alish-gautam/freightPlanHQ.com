@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "vitest run",
+    "test": "vitest run --exclude '**/.kilo/**'",
     "check": "astro check",
     "deploy": "astro build && wrangler pages deploy dist --project-name freightplanhq"
   },
